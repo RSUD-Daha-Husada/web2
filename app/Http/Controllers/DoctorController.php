@@ -101,6 +101,17 @@ class DoctorController extends Controller
         }
     }
 
+    public function edit($id)
+    {
+        $doctor = Doctor::find($id);
+        
+        if (!$doctor) {
+            return response()->json(['error' => 'Data dokter tidak ditemukan!'], 404);
+        }
+        
+        return response()->json($doctor);
+    }
+
     /**
      * Halaman user
      */
@@ -200,55 +211,63 @@ class DoctorController extends Controller
         ]);
     }
 
+
     /**
      * API untuk update dokter
      */
-    public function updateDoctor(Request $request, $id)
+    public function update(Request $request, $id)
     {
-        $doctor = Doctor::find($id);
-
-        if (!$doctor) {
-            return response()->json([
-                'success' => false,
-                'message' => 'Dokter tidak ditemukan'
-            ], 404);
-        }
-
-        $request->validate([
+        // Validasi input
+        $validated = $request->validate([
             'name' => 'required|string|max:255',
-            'specialty' => 'required|string|max:255',
-            'title' => 'required|string|max:255',
+            'specialty' => 'required|string',
+            'email' => 'required|email|unique:doctors,email,' . $id,
+            'phone' => 'required|string|max:20',
             'description' => 'required|string',
-            'phone' => 'required|string|max:255',
-            'email' => 'required|email|max:255',
-            'image' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'education' => 'required|string',
+            'experience' => 'required|string',
+            'schedule' => 'required|string',
+            'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
         ]);
-
-        $doctor->name = $request->name;
-        $doctor->specialty = $request->specialty;
-        $doctor->title = $request->title;
-        $doctor->description = $request->description;
-        $doctor->phone = $request->phone;
-        $doctor->email = $request->email;
-
+        
+        // Cari data dokter
+        $doctor = Doctor::find($id);
+        
+        if (!$doctor) {
+            return response()->json(['error' => 'Data dokter tidak ditemukan!'], 404);
+        }
+        
+        // Update data
+        $doctor->name = $validated['name'];
+        $doctor->specialty = $validated['specialty'];
+        $doctor->email = $validated['email'];
+        $doctor->phone = $validated['phone'];
+        $doctor->description = $validated['description'];
+        $doctor->education = $validated['education'];
+        $doctor->experience = $validated['experience'];
+        $doctor->schedule = $validated['schedule'];
+        
+        // Handle upload foto
         if ($request->hasFile('image')) {
             // Hapus gambar lama jika ada
             if ($doctor->image && File::exists(public_path($doctor->image))) {
                 File::delete(public_path($doctor->image));
             }
-
+    
             $image = $request->file('image');
             $imageName = time() . '.' . $image->getClientOriginalExtension();
             $image->move(public_path('images/doctors'), $imageName);
             $doctor->image = 'images/doctors/' . $imageName;
         }
-
+        
+        // Simpan perubahan
         $doctor->save();
-
+        
+        // Return response JSON untuk AJAX
         return response()->json([
             'success' => true,
-            'message' => 'Dokter berhasil diperbarui',
-            'data' => $doctor
+            'message' => 'Data dokter berhasil diperbarui!',
+            'redirect' => route('doctors.admin')
         ]);
     }
 }

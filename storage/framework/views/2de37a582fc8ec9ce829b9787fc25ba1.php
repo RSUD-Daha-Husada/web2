@@ -288,9 +288,6 @@
                         <a class="nav-link" href="#">Kontak</a>
                     </li>
                 </ul>
-                <a href="<?php echo e(url('/patient-portal')); ?>" class="btn btn-primary ms-3">
-                    <i class="fas fa-calendar-check me-2"></i>Jadwal Janji
-                </a>
             </div>
         </div>
     </nav>
@@ -353,29 +350,50 @@
     <!-- Doctor Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title">Temukan Dokter Spesialis</h2>
-                <p class="lead">Pilih spesialisasi yang Anda butuhkan dari tim dokter kami yang berpengalaman</p>
-            </div>
-
             <!-- Search and Filter -->
-            <div class="row mb-4">
-                <div class="col-md-6 mx-auto">
-                    <div class="search-container">
-                        <i class="fas fa-search search-icon"></i>
-                        <input type="text" class="search-input" id="searchDoctor" placeholder="Cari nama dokter...">
+            <section class="py-5 bg-light">
+                <div class="container">
+                    <div class="text-center mb-5" data-aos="fade-up">
+                        <h2 class="section-title">Temukan Dokter Spesialis</h2>
+                        <p class="lead">Pilih spesialisasi yang Anda butuhkan dari tim dokter kami yang berpengalaman
+                        </p>
+                    </div>
+                    <!-- Search and Filter -->
+                    <div class="row mb-5">
+                        <div class="col-md-6 mx-auto" data-aos="fade-up">
+                            <div class="search-container">
+                                <i class="fas fa-search search-icon"></i>
+                                <input type="text" class="search-input" id="searchDoctor"
+                                    placeholder="Cari nama dokter...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-4 justify-content-center" data-aos="fade-up">
+                        <div class="col-12 d-flex flex-wrap justify-content-center">
+                            <button class="filter-btn active" data-filter="all">Semua Dokter</button>
+                            <button class="filter-btn" data-filter="mata">Dokter Mata</button>
+                            <button class="filter-btn" data-filter="penyakit-dalam">Dokter Penyakit Dalam</button>
+                            <button class="filter-btn" data-filter="kulit-kelamin">Dokter Kulit Kelamin</button>
+                            <button class="filter-btn" data-filter="jantung">Dokter Jantung</button>
+                            <button class="filter-btn" data-filter="bedah">Dokter Bedah</button>
+                            <button class="filter-btn" data-filter="orthopedi">Dokter Orthopedi</button>
+                            <button class="filter-btn" data-filter="tht">Dokter THT</button>
+                            <button class="filter-btn" data-filter="kandungan">Dokter Kandungan</button>
+                            <button class="filter-btn" data-filter="anak">Dokter Anak</button>
+                            <button class="filter-btn" data-filter="umum">Dokter Umum</button>
+                            <button class="filter-btn" data-filter="kusta">Dokter Kusta</button>
+                            <button class="filter-btn" data-filter="gigi">Dokter Gigi</button>
+                            <button class="filter-btn" data-filter="rehabilitasi">Dokter Rehabilitasi</button>
+                            <button class="filter-btn" data-filter="urologi">Klinik Urologi</button>
+                            <button class="filter-btn" data-filter="neurologi">Klinik Neurologi</button>
+                        </div>
+                    </div>
+                    <!-- Doctor Cards -->
+                    <div class="row g-4" id="doctorContainer">
+                        <!-- Doctor cards will be dynamically loaded here -->
                     </div>
                 </div>
-            </div>
-
-            <div class="row mb-4 justify-content-center">
-                <div class="col-12 d-flex flex-wrap justify-content-center">
-                    <button class="filter-btn active" data-filter="all">Semua Dokter</button>
-                    <button class="filter-btn" data-filter="spesialis-penyakit-dalam">Dokter Penyakit Dalam</button>
-                    <button class="filter-btn" data-filter="spesialis-anak">Dokter Anak</button>
-                    <button class="filter-btn" data-filter="spesialis-bedah">Dokter Bedah</button>
-                </div>
-            </div>
+            </section>
 
             <!-- Doctor Cards -->
             <div class="row g-4" id="doctorContainer">

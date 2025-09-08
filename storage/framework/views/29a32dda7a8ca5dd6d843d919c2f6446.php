@@ -879,7 +879,7 @@
         </a>
         <nav>
             <ul>
-                <li><a class="nav-link" href="{{ url('/') }}" data-speak="Beranda">Beranda</a></li>
+                <li><a class="nav-link" href="<?php echo e(url('/')); ?>" data-speak="Beranda">Beranda</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-speak="Berita">
                         Berita <i class="fas fa-chevron-down"></i>
@@ -1175,7 +1175,7 @@
                     </div>
                     <h3>${news.title}</h3>
                     <p>${news.content ? news.content.substring(0, 150) + (news.content.length > 150 ? '...' : '') : ''}</p>
-                    <a href="{{ route('berita') }}" onclick="showNewsDetail(${news.id}); return false;" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    <a href="<?php echo e(route('berita')); ?>" onclick="showNewsDetail(${news.id}); return false;" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
         `;
@@ -1220,7 +1220,7 @@
     function showNewsDetail(newsId) {
         console.log('Menampilkan detail berita ID:', newsId);
         sessionStorage.setItem('selectedNewsId', newsId);
-        window.location.href = "{{ route('berita') }}";
+        window.location.href = "<?php echo e(route('berita')); ?>";
     }
 
     // Format tanggal
@@ -1589,7 +1589,7 @@
         // Show news detail
         function showNewsDetail(newsId) {
             sessionStorage.setItem('selectedNewsId', newsId);
-            window.location.href = "{{ route('berita') }}";
+            window.location.href = "<?php echo e(route('berita')); ?>";
         }
         
         // Check and fix news data
@@ -1612,4 +1612,4 @@
         checkAndFixNewsData();
     </script>
 </body>
-</html>
+</html><?php /**PATH /Users/bilalabdillah/Documents/klinik-laravel/resources/views/berita.blade.php ENDPATH**/ ?>

@@ -22,6 +22,7 @@
 
     <!-- Tambahkan sebelum </body> -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
             once: true  // supaya animasi hanya jalan sekali saat scroll
@@ -375,9 +376,11 @@
             </div>
         </div>
         <!-- Ubah dari -->
-        <a href="/doctors" class="view-all-btn">
-    <i class="fas fa-users me-2"></i> Lihat Semua Dokter
-</a>
+        <div class="text-center mt-3">
+            <a href="/doctors" class="view-all-btn btn btn-primary">
+                <i class="fas fa-users me-2"></i> Lihat Semua Dokter
+            </a>
+        </div>
     </div>
 </section>
 
@@ -398,613 +401,21 @@
             </div>
 
             <div class="posts-wrapper" id="postsWrapper">
-                <!-- Post 1: Media Pagi -->
-                <div class="post-container">
-                    <div class="post-header">
-                        <div class="ig-profile">
-                            <a href="https://www.instagram.com/rsud.dahahusada" target="_blank">
-                                <img src="ig.png" alt="RSUD Daha Husada" class="profile-pic">
-                            </a>
-                            <div class="user-info">
-                                <!-- Username -->
-                                <a href="https://www.instagram.com/rsud.dahahusada" target="_blank" class="username">
-                                    RSUD Daha Husada
-                                </a>
-                                <div class="description">
-                                    <i class="fas fa-hospital description-icon"></i>
-                                    <span>RSUD Daha Husada Kediri</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="view-profile"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')">
-                            Lihat Profil
-                        </button>
-                    </div>
-                    <a href="https://www.instagram.com/p/DMoprmnBmiQ/?img_index=1" target="_blank"
-                        style="display:block;">
-                        <div class="post-image-container">
-                            <img src="konten1.png" alt="Media Pagi" class="post-image">
-                        </div>
-                    </a>
-                    <div class="post-actions">
-                        <div class="flex">
-                            <i class="far fa-heart"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-comment"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-paper-plane"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                        </div>
-                        <i class="far fa-bookmark"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                    </div>
-                    <div class="engagement">
-                        <span>64 suka</span>
-                    </div>
-                    <div class="caption">
-                        <span class="caption-username">rsud.dahahusada</span>
-                        <span>Selamat Hari Hepatitis Sedunia
-                            Lets Break It Down</span>
-                    </div>
-                    <div class="comment-section">
-                        <div class="comment">
-                            <span class="comment-username">health_care</span>
-                            <span class="comment-text collapsed" id="comment-text-0">
-                                Hari Hepatitis Sedunia menjadi pengingat bagi kita semua
-                                untuk menjaga kesehatan hati dengan deteksi dini, vaksinasi,
-                                dan pola hidup sehat demi masa depan yang lebih sehat dan bebas hepatitis
-                                <span class="hashtag">#Rumahsakitumumdahahusada</span>
-                                <span class="hashtag">#RSUDAHAHUSADA</span>
-                                <span class="hashtag">#RSUDH</span>
-                                <span class="hashtag">#Rumahsakitdahahusada</span>
-                                <span class="hashtag">#RSDAHAHUSADA</span>
-                                <span class="hashtag">#RSDH</span>
-                                <span class="hashtag">#rumahsakit</span>
-                                <span class="hashtag">#kediri</span>
-                                <span class="hashtag">#kedirihits</span>
-                                <span class="hashtag">#kedirilagi</span>
-                                <span class="hashtag">#kediriku</span>
-                                <span class="hashtag">#kedirikeren</span>
-                                <span class="hashtag">#kedirikekinian</span>
-                                <span class="hashtag">#infokediri</span>
-                                <span class="hashtag">#nawabaktisatya</span>
-                                <span class="hashtag">#mendukungastacita</span>
-                                <span class="hashtag">#sinergimembangunnegeri</span></span>
-                            </span>
-                            <span class="more-less-btn" onclick="toggleComment(0)">more</span>
-                        </div>
-                        <div class="add-comment">
-                            <input type="text" placeholder="Tambahkan komentar...">
-                            <button>
-                                <i class="fab fa-instagram" style="font-size:25px; color:#E1306C;"
-                                    onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Post 2: Bhakti Sosial -->
-                <div class="post-container">
-                    <div class="post-header">
-                        <div class="ig-profile">
-                            <a href="https://www.instagram.com/rsud.dahahusada" target="_blank">
-                                <img src="ig.png" alt="RSUD Daha Husada" class="profile-pic">
-                            </a>
-                            <div class="user-info">
-                                <!-- Username -->
-                                <a href="https://www.instagram.com/rsud.dahahusada" target="_blank" class="username">
-                                    RSUD Daha Husada
-                                </a>
-                                <div class="description">
-                                    <i class="fas fa-heartbeat description-icon"></i>
-                                    <span>RSUD Daha Husada Kediri</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="view-profile"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')">
-                            Lihat Profil
-                        </button>
-                    </div>
-                    <a href="https://www.instagram.com/rsud.dahahusada/p/DM98hVahadY" target="_blank"
-                        style="display:block;">
-                        <div class="post-image-container">
-                            <img src="konten2.png" alt="Bhakti Sosial" class="post-image">
-                        </div>
-                    </a>
-                    <div class="post-actions">
-                        <div class="flex">
-                            <i class="far fa-heart"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-comment"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-paper-plane"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                        </div>
-                        <i class="far fa-bookmark"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                    </div>
-                    <div class="engagement">
-                        <span>78 suka</span>
-                    </div>
-                    <div class="caption">
-                        <span class="caption-username">rsud.dahahusada</span>
-                        <span>Yuk sobat saksikan penyuluhan "Menjaga Kesehatan Mata di Era Digital" bersama dr. Dyah
-                            Novi Wulansari, M.Kes besok hanya di Live Instagram RSUD Daha Husada</span>
-                    </div>
-                    <div class="comment-section">
-                        <div class="comment">
-                            <span class="comment-username">health_care</span>
-                            <span class="comment-text collapsed" id="comment-text-1">
-                                ✨ Jaga Kesehatan Mata di Era Digital ✨
-                                Banyak menatap layar bisa bikin mata lelah. Yuk, cari tahu tipsnya langsung dari
-                                ahlinya!
-                                <span class="hashtag">#Rumahsakitumumdahahusada</span>
-                                <span class="hashtag">#RSUDAHAHUSADA</span>
-                                <span class="hashtag">#RSUDH</span>
-                                <span class="hashtag">#Rumahsakitdahahusada</span>
-                                <span class="hashtag">#RSDAHAHUSADA</span>
-                                <span class="hashtag">#RSDH</span>
-                                <span class="hashtag">#rumahsakit</span>
-                                <span class="hashtag">#kediri</span>
-                                <span class="hashtag">#kedirihits</span>
-                                <span class="hashtag">#kedirilagi</span>
-                                <span class="hashtag">#kediriku</span>
-                                <span class="hashtag">#kedirikeren</span>
-                                <span class="hashtag">#kedirikekinian</span>
-                                <span class="hashtag">#infokediri</span>
-                                <span class="hashtag">#nawabaktisatya</span>
-                                <span class="hashtag">#mendukungastacita</span>
-                                <span class="hashtag">#sinergimembangunnegeri</span></span>
-                            </span>
-                            <span class="more-less-btn" onclick="toggleComment(1)">more</span>
-                        </div>
-                        <div class="add-comment">
-                            <input type="text" placeholder="Tambahkan komentar...">
-                            <button>
-                                <i class="fab fa-instagram" style="font-size:25px; color:#E1306C;"
-                                    onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Post 3: Pendaftaran Online -->
-                <div class="post-container">
-                    <div class="post-header">
-                        <div class="ig-profile">
-                            <a href="https://www.instagram.com/rsud.dahahusada" target="_blank">
-                                <img src="ig.png" alt="RSUD Daha Husada" class="profile-pic">
-                            </a>
-                            <div class="user-info">
-                                <!-- Username -->
-                                <a href="https://www.instagram.com/rsud.dahahusada" target="_blank" class="username">
-                                    RSUD Daha Husada
-                                </a>
-                                <div class="description">
-                                    <i class="fas fa-user-md description-icon"></i>
-                                    <span>RSUD Daha Husada Kediri</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="view-profile"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')">
-                            Lihat Profil
-                        </button>
-                    </div>
-                    <a href="https://www.instagram.com/rsud.dahahusada/p/DMzdWYRBjJ8/" target="_blank"
-                        style="display:block;">
-                        <div class="post-image-container">
-                            <img src="konten3.png" alt="Pendaftaran Online" class="post-image">
-                        </div>
-                    </a>
-                    <div class="post-actions">
-                        <div class="flex">
-                            <i class="far fa-heart"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-comment"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-paper-plane"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                        </div>
-                        <i class="far fa-bookmark"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                    </div>
-                    <div class="engagement">
-                        <span>92 suka</span>
-                    </div>
-                    <div class="caption">
-                        <span class="caption-username">rsud.dahahusada</span>
-                        <span>Kini Pendaftaran Online RSUD Daha Husada semakin mudah!
-                            Daftar dari rumah saja, tidak perlu antri</span>
-                    </div>
-                    <div class="comment-section">
-                        <div class="comment">
-                            <span class="comment-username">health_care</span>
-                            <span class="comment-text collapsed" id="comment-text-2">
-                                Bersatu dalam semangat kebersamaan, melangkah bersama menuju Indonesia yang sejahtera,
-                                adil, dan maju. Karena masa depan bangsa ada di tangan kita semua.
-                                <span class="hashtag">#Rumahsakitumumdahahusada</span>
-                                <span class="hashtag">#RSUDAHAHUSADA</span>
-                                <span class="hashtag">#RSUDH</span>
-                                <span class="hashtag">#Rumahsakitdahahusada</span>
-                                <span class="hashtag">#RSDAHAHUSADA</span>
-                                <span class="hashtag">#RSDH</span>
-                                <span class="hashtag">#rumahsakit</span>
-                                <span class="hashtag">#kediri</span>
-                                <span class="hashtag">#kedirihits</span>
-                                <span class="hashtag">#kedirilagi</span>
-                                <span class="hashtag">#kediriku</span>
-                                <span class="hashtag">#kedirikeren</span>
-                                <span class="hashtag">#kedirikekinian</span>
-                                <span class="hashtag">#infokediri</span>
-                                <span class="hashtag">#nawabaktisatya</span>
-                                <span class="hashtag">#mendukungastacita</span>
-                                <span class="hashtag">#sinergimembangunnegeri</span></span>
-                            </span>
-                            <span class="more-less-btn" onclick="toggleComment(2)">more</span>
-                        </div>
-                        <div class="add-comment">
-                            <input type="text" placeholder="Tambahkan komentar...">
-                            <button>
-                                <i class="fab fa-instagram" style="font-size:25px; color:#E1306C;"
-                                    onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Post 4: Seminar Kesehatan -->
-                <div class="post-container">
-                    <div class="post-header">
-                        <div class="ig-profile">
-                            <a href="https://www.instagram.com/rsud.dahahusada" target="_blank">
-                                <img src="ig.png" alt="RSUD Daha Husada" class="profile-pic">
-                            </a>
-                            <div class="user-info">
-                                <!-- Username -->
-                                <a href="https://www.instagram.com/rsud.dahahusada" target="_blank" class="username">
-                                    RSUD Daha Husada
-                                </a>
-                                <div class="description">
-                                    <i class="fas fa-stethoscope description-icon"></i>
-                                    <span>Edukasi Kesehatan</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="view-profile"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')">
-                            Lihat Profil
-                        </button>
-                    </div>
-                    <a href="https://www.instagram.com/rsud.dahahusada/p/DMzdWYRBjJ8/" target="_blank"
-                        style="display:block;">
-                        <div class="post-image-container">
-                            <img src="konten4.png" alt="Seminar Kesehatan" class="post-image">
-                        </div>
-                    </a>
-                    <div class="post-actions">
-                        <div class="flex">
-                            <i class="far fa-heart"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-comment"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-paper-plane"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                        </div>
-                        <i class="far fa-bookmark"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                    </div>
-                    <div class="engagement">
-                        <span>105 suka</span>
-                    </div>
-                    <div class="caption">
-                        <span class="caption-username">rsud.dahahusada</span>
-                        <span>Selamat Hari Pramuka Sobat Daha</span>
-                    </div>
-                    <div class="comment-section">
-                        <div class="comment">
-                            <span class="comment-username">health_care</span>
-                            <span class="comment-text collapsed" id="comment-text-3">
-                                Hari ini kita rayakan semangat persaudaraan, solidaritas,
-                                cinta alam, dan kerja keras yang diajarkan oleh gerakan Pramuka.
-                                Semoga nilai-nilai luhur ini terus hidup dalam setiap langkah kita,
-                                menguatkan persatuan, dan membentuk generasi yang tangguh, peduli, dan siap berkarya
-                                untuk bangsa
-                                <span class="hashtag">#Rumahsakitumumdahahusada</span>
-                                <span class="hashtag">#RSUDAHAHUSADA</span>
-                                <span class="hashtag">#RSUDH</span>
-                                <span class="hashtag">#Rumahsakitdahahusada</span>
-                                <span class="hashtag">#RSDAHAHUSADA</span>
-                                <span class="hashtag">#RSDH</span>
-                                <span class="hashtag">#rumahsakit</span>
-                                <span class="hashtag">#kediri</span>
-                                <span class="hashtag">#kedirihits</span>
-                                <span class="hashtag">#kedirilagi</span>
-                                <span class="hashtag">#kediriku</span>
-                                <span class="hashtag">#kedirikeren</span>
-                                <span class="hashtag">#kedirikekinian</span>
-                                <span class="hashtag">#infokediri</span>
-                                <span class="hashtag">#nawabaktisatya</span>
-                                <span class="hashtag">#mendukungastacita</span>
-                                <span class="hashtag">#sinergimembangunnegeri</span>
-                            </span>
-                            </span>
-                            <span class="more-less-btn" onclick="toggleComment(3)">more</span>
-                        </div>
-                        <div class="add-comment">
-                            <input type="text" placeholder="Tambahkan komentar...">
-                            <button>
-                                <i class="fab fa-instagram" style="font-size:25px; color:#E1306C;"
-                                    onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Post 5: Donor Darah -->
-                <div class="post-container">
-                    <div class="post-header">
-                        <div class="ig-profile">
-                            <a href="https://www.instagram.com/rsud.dahahusada" target="_blank">
-                                <img src="ig.png" alt="RSUD Daha Husada" class="profile-pic">
-                            </a>
-                            <div class="user-info">
-                                <!-- Username -->
-                                <a href="https://www.instagram.com/rsud.dahahusada" target="_blank" class="username">
-                                    RSUD Daha Husada
-                                </a>
-                                <div class="description">
-                                    <i class="fas fa-tint description-icon"></i>
-                                    <span>Gerakan Kemanusiaan</span>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="view-profile"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')">
-                            Lihat Profil
-                        </button>
-                    </div>
-                    <a href="https://www.instagram.com/rsud.dahahusada/p/DMzdWYRBjJ8/" target="_blank"
-                        style="display:block;">
-                        <div class="post-image-container">
-                            <img src="konte5.png" alt="Donor Darah" class="post-image">
-                        </div>
-                    </a>
-                    <div class="post-actions">
-                        <div class="flex">
-                            <i class="far fa-heart"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-comment"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            <i class="far fa-paper-plane"
-                                onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                        </div>
-                        <i class="far fa-bookmark"
-                            onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                    </div>
-                    <div class="engagement">
-                        <span>128 suka</span>
-                    </div>
-                    <div class="caption">
-                        <span class="caption-username">rsud.dahahusada</span>
-                        <span>Yuk sobat saksikan penyuluhan "Tetap Sehat dan Bahagia di Usia Senja" bersama dr. Ahmad
-                            Wahyu Pamungkas besok hanya di Live Instagram RSUD Daha Husada</span>
-                    </div>
-                    <div class="comment-section">
-                        <div class="comment">
-                            <span class="comment-username">health_care</span>
-                            <span class="comment-text collapsed" id="comment-text-4">
-                                Usia boleh bertambah, tapi kesehatan dan kebahagiaan harus
-                                tetap terjaga. Melalui penyuluhan ini, dr. Ahmad Wahyu Pamungkas
-                                akan berbagi tips dan pengetahuan seputar menjaga tubuh tetap bugar,
-                                pikiran positif, dan hati bahagia di masa lanjut usia. Mari ikuti dan
-                                dapatkan inspirasi untuk hidup sehat dan penuh semangat setiap hari
-                                <span class="hashtag">#Rumahsakitumumdahahusada</span>
-                                <span class="hashtag">#RSUDAHAHUSADA</span>
-                                <span class="hashtag">#RSUDH</span>
-                                <span class="hashtag">#Rumahsakitdahahusada</span>
-                                <span class="hashtag">#RSDAHAHUSADA</span>
-                                <span class="hashtag">#RSDH</span>
-                                <span class="hashtag">#rumahsakit</span>
-                                <span class="hashtag">#kediri</span>
-                                <span class="hashtag">#kedirihits</span>
-                                <span class="hashtag">#kedirilagi</span>
-                                <span class="hashtag">#kediriku</span>
-                                <span class="hashtag">#kedirikeren</span>
-                                <span class="hashtag">#kedirikekinian</span>
-                                <span class="hashtag">#infokediri</span>
-                                <span class="hashtag">#nawabaktisatya</span>
-                                <span class="hashtag">#mendukungastacita</span>
-                                <span class="hashtag">#sinergimembangunnegeri</span></span>
-                            </span>
-                            <span class="more-less-btn" onclick="toggleComment(4)">more</span>
-                        </div>
-                        <div class="add-comment">
-                            <input type="text" placeholder="Tambahkan komentar...">
-                            <button>
-                                <i class="fab fa-instagram" style="font-size:25px; color:#E1306C;"
-                                    onclick="window.open('https://www.instagram.com/rsud.dahahusada', '_blank')"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-    </div>
-    <script>
-        let currentPosition = 0;
-        const postWidth = 380; // 350px + 30px margin
-        let totalPosts = 5;
-        const visiblePosts = 3;
-        let maxPosition = -(totalPosts - visiblePosts) * postWidth;
 
-        // Fungsi untuk mengurutkan postingan berdasarkan timestamp (terbaru dulu)
-        function sortPostsByDate() {
-            const postsWrapper = document.getElementById('postsWrapper');
-            const posts = Array.from(postsWrapper.querySelectorAll('.post-container'));
-
-            // Urutkan postingan berdasarkan timestamp (terbaru dulu)
-            posts.sort((a, b) => {
-                const dateA = new Date(a.getAttribute('data-timestamp'));
-                const dateB = new Date(b.getAttribute('data-timestamp'));
-                return dateB - dateA; // Urutkan dari terbaru ke terlama
-            });
-
-            // Kosongkan wrapper
-            postsWrapper.innerHTML = '';
-
-            // Tambahkan kembali postingan yang sudah diurutkan
-            posts.forEach(post => {
-                postsWrapper.appendChild(post);
-            });
-
-            // Reset carousel position setelah pengurutan
-            currentPosition = 0;
-            updateCarousel();
-            updateIndicators();
-        }
-
-        // Panggil fungsi pengurutan saat halaman dimuat
-        document.addEventListener('DOMContentLoaded', function () {
-            sortPostsByDate();
-        });
-
-        function moveCarousel(direction) {
-            currentPosition -= direction * postWidth; // Perbaikan arah
-            // Boundary checks
-            if (currentPosition > 0) {
-                currentPosition = 0;
-            } else if (currentPosition < maxPosition) {
-                currentPosition = maxPosition;
-            }
-            updateCarousel();
-            updateIndicators();
-        }
-
-        function updateCarousel() {
-            const postsWrapper = document.getElementById('postsWrapper');
-            postsWrapper.style.transform = `translateX(${currentPosition}px)`;
-        }
-
-        function goToSlide(slideIndex) {
-            currentPosition = -slideIndex * postWidth;
-            // Boundary checks
-            if (currentPosition > 0) {
-                currentPosition = 0;
-            } else if (currentPosition < maxPosition) {
-                currentPosition = maxPosition;
-            }
-            updateCarousel();
-            updateIndicators();
-        }
-
-        function updateIndicators() {
-            const indicators = document.querySelectorAll('.indicator');
-            const activeIndex = Math.abs(Math.round(currentPosition / postWidth));
-            indicators.forEach((indicator, index) => {
-                if (index === activeIndex) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
-                }
-            });
-        }
-
-        // Fungsi untuk toggle more/less comment
-        function toggleComment(index) {
-            const commentText = document.getElementById(`comment-text-${index}`);
-            const moreLessBtn = commentText.nextElementSibling;
-            if (commentText.classList.contains('collapsed')) {
-                commentText.classList.remove('collapsed');
-                moreLessBtn.textContent = 'less';
-            } else {
-                commentText.classList.add('collapsed');
-                moreLessBtn.textContent = 'more';
-            }
-        }
-
-        // Optional: Auto-slide carousel
-        // setInterval(() => {
-        //     if (currentPosition <= maxPosition) {
-        //         currentPosition = 0;
-        //     } else {
-        //         currentPosition -= postWidth;
-        //     }
-        //     updateCarousel();
-        //     updateIndicators();
-        // }, 5000); // Change slide every 5 seconds
-    </script>
-
-
-
+    <!-- Berita terkini -->
     <section class="berita-preview">
         <div class="berita-header">
             <h2>Berita Terkini</h2>
             <p>Tetap update dengan informasi kesehatan terbaru dari RSUD Daha Husada</p>
         </div>
         <div class="berita-grid" id="beritaGrid">
-            <div class="berita-card">
-                <div class="berita-img">
-                    <img src="https://images.unsplash.com/photo-1616281177739-2a8192c2421d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                        alt="Berita Kesehatan">
-                    <span class="berita-kategori">Pencegahan</span>
-                </div>
-                <div class="berita-content">
-                    <div class="berita-tanggal">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>15 Mei 2023</span>
-                    </div>
-                    <h3>Tips Menjaga Kesehatan Jantung di Tengah Kesibukan</h3>
-                    <p>Dalam kehidupan modern yang penuh dengan kesibukan, menjaga kesehatan jantung menjadi semakin
-                        penting. Berikut adalah beberapa tips sederhana namun efektif untuk menjaga kesehatan jantung
-                        Anda...</p>
-                    <a href="<?php echo e(route('berita')); ?>" class="berita-link">Baca Selengkapnya <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="berita-card">
-                <div class="berita-img">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                        alt="Berita Kesehatan">
-                    <span class="berita-kategori">Penelitian</span>
-                </div>
-                <div class="berita-content">
-                    <div class="berita-tanggal">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>10 Mei 2023</span>
-                    </div>
-                    <h3>Terobosan Baru dalam Pengobatan Kanker</h3>
-                    <p>Tim peneliti kami berhasil menemukan metode baru dalam pengobatan kanker yang lebih efektif
-                        dengan
-                        efek samping yang minimal. Penemuan ini diharapkan dapat membantu banyak pasien kanker di
-                        seluruh
-                        dunia...</p>
-                    <a href="<?php echo e(route('berita')); ?>" class="berita-link">Baca Selengkapnya <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="berita-card">
-                <div class="berita-img">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
-                        alt="Berita Kesehatan">
-                    <span class="berita-kategori">Gizi</span>
-                </div>
-                <div class="berita-content">
-                    <div class="berita-tanggal">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>5 Mei 2023</span>
-                    </div>
-                    <h3>Panduan Gizi Seimbang untuk Anak-anak</h3>
-                    <p>Nutrisi yang tepat sangat penting untuk tumbuh kembang anak. Ahli gizi kami membagikan panduan
-                        lengkap tentang cara menyusun menu gizi seimbang untuk anak-anak sesuai dengan usia mereka...
-                    </p>
-                    <a href="<?php echo e(route('berita')); ?>" class="berita-link">Baca Selengkapnya <i
-                            class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+            <!-- Berita akan dimuat di sini melalui JavaScript -->
         </div>
         <div class="berita-more-container">
             <a href="<?php echo e(route('berita')); ?>" class="berita-more-button" style="
@@ -1575,7 +986,16 @@
             <div class="container">
                 <div class="footer-bottom-content">
                     <div class="footer-copyright">
-                        &copy; 2023 RSUD Daha Husada. All Rights Reserved.
+                        &copy; 2025/2026 RSUD Daha Husada. All Rights Reserved.
+                        <a href="https://portofolio-bilaldev.netlify.app/" target="_blank"
+                            style="text-decoration: none;">
+                            <span style="background: linear-gradient(135deg, #4facfe, #00f2fe);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+       font-weight: bold;">
+                                By Bilal
+                            </span>
+                        </a>
                     </div>
                     <div class="footer-bottom-links">
                         <a href="#">Privacy Policy</a>
@@ -1629,8 +1049,6 @@
             </div>
         </div>
     </div>
-
-    <script><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- JavaScript untuk animasi footer saat scroll -->
@@ -1912,208 +1330,87 @@
         });
     </script>
 
+
     <script>
+
+        let currentPosition = 0;
+        const postWidth = 380; // 350px + 30px margin
+        let totalPosts = 5;
+        const visiblePosts = 3;
+        let maxPosition = -(totalPosts - visiblePosts) * postWidth;
+
+        // Fungsi untuk mengurutkan postingan berdasarkan timestamp (terbaru dulu)
+        function sortPostsByDate() {
+            const postsWrapper = document.getElementById('postsWrapper');
+            const posts = Array.from(postsWrapper.querySelectorAll('.post-container'));
+
+            // Urutkan postingan berdasarkan timestamp (terbaru dulu)
+            posts.sort((a, b) => {
+                const dateA = new Date(a.getAttribute('data-timestamp'));
+                const dateB = new Date(b.getAttribute('data-timestamp'));
+                return dateB - dateA; // Urutkan dari terbaru ke terlama
+            });
+
+            // Kosongkan wrapper
+            postsWrapper.innerHTML = '';
+
+            // Tambahkan kembali postingan yang sudah diurutkan
+            posts.forEach(post => {
+                postsWrapper.appendChild(post);
+            });
+
+            // Reset carousel position setelah pengurutan
+            currentPosition = 0;
+            updateCarousel();
+            updateIndicators();
+        }
+
+        // Panggil fungsi pengurutan saat halaman dimuat
         document.addEventListener('DOMContentLoaded', function () {
-            // Cek dukungan browser
-            if (!('speechSynthesis' in window)) {
-                console.log('Browser tidak mendukung Web Speech API');
-                return;
-            }
-
-            const synth = window.speechSynthesis;
-            const speechIndicator = document.getElementById('speechIndicator');
-            let currentUtterance = null;
-            let selectedTextRange = null;
-            let isProcessing = false; // Flag untuk mencegah multiple trigger
-
-            // Deteksi seleksi teks dengan debouncing
-            let selectionTimeout;
-            document.addEventListener('mouseup', function () {
-                clearTimeout(selectionTimeout);
-
-                selectionTimeout = setTimeout(() => {
-                    if (isProcessing) return;
-
-                    const selection = window.getSelection();
-                    const selectedText = selection.toString().trim();
-
-                    if (selectedText) {
-                        isProcessing = true;
-
-                        // Simpan range seleksi
-                        selectedTextRange = selection.getRangeAt(0);
-
-                        // Hentikan pembacaan sebelumnya
-                        if (synth.speaking) {
-                            synth.cancel();
-                        }
-
-                        // Hapus highlight sebelumnya
-                        removeHighlight();
-
-                        // Highlight teks
-                        highlightSelectedText();
-
-                        // Baca teks
-                        speakText(selectedText);
-                    }
-                }, 300); // Debounce 300ms
-            });
-
-            // Fungsi untuk membaca teks
-            function speakText(text) {
-                currentUtterance = new SpeechSynthesisUtterance(text);
-
-                // Atur pengaturan
-                currentUtterance.lang = 'id-ID';
-                currentUtterance.rate = 1.0;
-                currentUtterance.pitch = 1.0;
-                currentUtterance.volume = 1.0;
-
-                // Event saat mulai
-                currentUtterance.onstart = function () {
-                    if (speechIndicator) {
-                        speechIndicator.classList.add('active');
-                    }
-                };
-
-                // Event saat selesai
-                currentUtterance.onend = function () {
-                    isProcessing = false;
-                    if (speechIndicator) {
-                        speechIndicator.classList.remove('active');
-                    }
-                    removeHighlight();
-                };
-
-                // Event jika error
-                currentUtterance.onerror = function () {
-                    isProcessing = false;
-                    if (speechIndicator) {
-                        speechIndicator.classList.remove('active');
-                    }
-                    removeHighlight();
-                };
-
-                // Mulai pembacaan
-                synth.speak(currentUtterance);
-            }
-
-            // Highlight teks yang dibaca
-            function highlightSelectedText() {
-                if (!selectedTextRange) return;
-
-                try {
-                    const span = document.createElement('span');
-                    span.className = 'speaking';
-
-                    // Hapus highlight yang ada sebelumnya
-                    removeHighlight();
-
-                    // Wrap seleksi dengan span
-                    selectedTextRange.surroundContents(span);
-                } catch (e) {
-                    console.log('Highlight error:', e);
-                }
-            }
-
-            // Hapus highlight dengan lebih aman
-            function removeHighlight() {
-                const highlightedElements = document.querySelectorAll('.speaking');
-                highlightedElements.forEach(el => {
-                    const parent = el.parentNode;
-                    if (parent) {
-                        // Pindahkan semua child node ke parent
-                        while (el.firstChild) {
-                            parent.insertBefore(el.firstChild, el);
-                        }
-                        // Hapus span yang kosong
-                        parent.removeChild(el);
-                    }
-                });
-            }
-
-            // Hentikan saat klik di luar
-            document.addEventListener('click', function (e) {
-                if (synth.speaking && !e.target.closest('p, h1, h2, h3, h4, h5, h6, span, div')) {
-                    synth.cancel();
-                    isProcessing = false;
-                }
-            });
-
-            // ======================
-            // FITUR HOVER SOUND
-            // ======================
-
-            // Tambahkan event listener untuk semua tombol dan link
-            const interactiveElements = document.querySelectorAll('button, a, [role="button"]');
-
-            interactiveElements.forEach(element => {
-                // Ambil teks dari elemen atau atribut khusus
-                const getTextToSpeak = (el) => {
-                    // Prioritaskan atribut data-speak jika ada
-                    if (el.getAttribute('data-speak')) {
-                        return el.getAttribute('data-speak');
-                    }
-
-                    // Gunakan teks dari elemen
-                    return el.textContent.trim() || el.getAttribute('aria-label') || el.getAttribute('title');
-                };
-
-                // Saat hover masuk
-                element.addEventListener('mouseenter', function () {
-                    // Jangan bicara jika sedang membaca teks blok
-                    if (isProcessing) return;
-
-                    const textToSpeak = getTextToSpeak(this);
-                    if (textToSpeak) {
-                        // Hentikan pembacaan hover sebelumnya jika ada
-                        if (synth.speaking && !currentUtterance?.isBlockText) {
-                            synth.cancel();
-                        }
-
-                        // Tandai ini sebagai pembicaraan hover
-                        const hoverUtterance = new SpeechSynthesisUtterance(textToSpeak);
-                        hoverUtterance.lang = 'id-ID';
-                        hoverUtterance.rate = 1; // Sedikit lebih cepat untuk hover
-                        hoverUtterance.volume = 5; // Volume lebih rendah
-                        hoverUtterance.isBlockText = false; // Tandai bukan teks blok
-
-                        // Event listeners
-                        hoverUtterance.onstart = () => {
-                            if (speechIndicator) {
-                                speechIndicator.classList.add('active');
-                                speechIndicator.innerHTML = '🔊 ' + textToSpeak.substring(0, 20) + '...';
-                            }
-                        };
-
-                        hoverUtterance.onend = () => {
-                            if (speechIndicator) {
-                                speechIndicator.classList.remove('active');
-                                speechIndicator.innerHTML = '🔊 Membaca...';
-                            }
-                        };
-
-                        synth.speak(hoverUtterance);
-                    }
-                });
-
-                // Saat hover keluar - hentikan pembacaan
-                element.addEventListener('mouseleave', function () {
-                    // Hanya hentikan jika ini pembicaraan hover
-                    if (synth.speaking && !currentUtterance?.isBlockText) {
-                        synth.cancel();
-                        if (speechIndicator) {
-                            speechIndicator.classList.remove('active');
-                            speechIndicator.innerHTML = '🔊 Membaca...';
-                        }
-                    }
-                });
-            });
+            sortPostsByDate();
         });
-    </script>
 
-    <script>
+        function moveCarousel(direction) {
+            currentPosition -= direction * postWidth; // Perbaikan arah
+            // Boundary checks
+            if (currentPosition > 0) {
+                currentPosition = 0;
+            } else if (currentPosition < maxPosition) {
+                currentPosition = maxPosition;
+            }
+            updateCarousel();
+            updateIndicators();
+        }
+
+        function updateCarousel() {
+            const postsWrapper = document.getElementById('postsWrapper');
+            postsWrapper.style.transform = `translateX(${currentPosition}px)`;
+        }
+
+        function goToSlide(slideIndex) {
+            currentPosition = -slideIndex * postWidth;
+            // Boundary checks
+            if (currentPosition > 0) {
+                currentPosition = 0;
+            } else if (currentPosition < maxPosition) {
+                currentPosition = maxPosition;
+            }
+            updateCarousel();
+            updateIndicators();
+        }
+
+        function updateIndicators() {
+            const indicators = document.querySelectorAll('.indicator');
+            const activeIndex = Math.abs(Math.round(currentPosition / postWidth));
+            indicators.forEach((indicator, index) => {
+                if (index === activeIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
         // Fungsi untuk menambahkan postingan baru ke carousel
         function addNewPostToCarousel(post) {
             const postsWrapper = document.getElementById('postsWrapper');
@@ -2279,80 +1576,91 @@
     </script>
 
     <script>
-        // Data berita contoh
-        const sampleNews = [
-            {
-                id: 1,
-                title: "Tips Menjaga Kesehatan Jantung di Tengah Kesibukan",
-                category: "pencegahan",
-                content: "Dalam kehidupan modern yang penuh dengan kesibukan, menjaga kesehatan jantung menjadi semakin penting. Berikut adalah beberapa tips sederhana namun efektif untuk menjaga kesehatan jantung Anda. Pertama, lakukan olahraga teratur setidaknya 30 menit setiap hari. Kedua, perhatikan pola makan dengan mengurangi garam dan lemak jenuh. Ketiga, kelola stres dengan baik melalui meditasi atau hobi yang menyenangkan.",
-                date: "2023-05-15",
-                image: "https://images.unsplash.com/photo-1616281177739-2a8192c2421d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                author: "Admin",
-                createdAt: new Date().toISOString()
-            },
-            {
-                id: 2,
-                title: "Terobosan Baru dalam Pengobatan Kanker",
-                category: "penelitian",
-                content: "Tim peneliti kami berhasil menemukan metode baru dalam pengobatan kanker yang lebih efektif dengan efek samping yang minimal. Penemuan ini diharapkan dapat membantu banyak pasien kanker di seluruh dunia. Metode ini menggunakan pendekatan imunoterapi yang lebih spesifik dalam menargetkan sel kanker tanpa merusak sel sehat di sekitarnya.",
-                date: "2023-05-10",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                author: "Dr. Ahmad Fauzi",
-                createdAt: new Date().toISOString()
-            },
-            {
-                id: 3,
-                title: "Panduan Gizi Seimbang untuk Anak-anak",
-                category: "gizi",
-                content: "Nutrisi yang tepat sangat penting untuk tumbuh kembang anak. Ahli gizi kami membagikan panduan lengkap tentang cara menyusun menu gizi seimbang untuk anak-anak sesuai dengan usia mereka. Panduan ini mencakup kebutuhan kalori, vitamin, dan mineral yang diperlukan anak dalam setiap tahap pertumbuhan.",
-                date: "2023-05-05",
-                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                author: "Dr. Siti Rahayu",
-                createdAt: new Date().toISOString()
+        // Cek dan inisialisasi localStorage
+        function initializeNewsStorage() {
+            if (!localStorage.getItem('newsList')) {
+                // Jika belum ada, buat array kosong
+                localStorage.setItem('newsList', JSON.stringify([]));
+                console.log('LocalStorage untuk berita diinisialisasi');
             }
-        ];
-
-        // Cek apakah ada data berita di localStorage
-        if (!localStorage.getItem('newsList')) {
-            localStorage.setItem('newsList', JSON.stringify(sampleNews));
         }
 
         // Fungsi untuk menampilkan berita di grid dashboard
         function loadBeritaGrid() {
+            console.log('Memuat berita grid...');
+
+            // Pastikan localStorage terinisialisasi
+            initializeNewsStorage();
+
             const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
             const container = document.getElementById('beritaGrid');
 
+            console.log('Total berita di localStorage:', newsList.length);
+            console.log('Data berita:', newsList);
+
+            // Jika tidak ada berita sama sekali, tampilkan pesan
             if (newsList.length === 0) {
-                // Tampilkan berita contoh jika tidak ada berita di localStorage
-                container.innerHTML = getSampleBeritaHTML();
+                container.innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
+                    <h5>Belum Ada Berita</h5>
+                    <p class="text-muted">Belum ada berita yang tersedia</p>
+                    <button class="btn btn-primary mt-3" onclick="createSampleNews()">
+                        <i class="fas fa-plus me-2"></i>Buat Berita Contoh
+                    </button>
+                </div>
+            `;
+                return;
+            }
+
+            // Filter berita yang statusnya "publish"
+            const publishedNews = newsList.filter(news => {
+                console.log('Berita:', news.title, 'Status:', news.status);
+                // Jika tidak ada field status, anggap sebagai publish
+                return !news.status || news.status === 'publish';
+            });
+
+            console.log('Jumlah berita yang dipublish:', publishedNews.length);
+
+            if (publishedNews.length === 0) {
+                container.innerHTML = `
+                <div class="col-12 text-center py-5">
+                    <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
+                    <h5>Belum Ada Berita Dipublikasikan</h5>
+                    <p class="text-muted">Ada ${newsList.length} berita tapi belum ada yang dipublikasikan</p>
+                    <div class="alert alert-info mt-3">
+                        <i class="fas fa-info-circle me-2"></i>
+                        <strong>Untuk Admin:</strong> Silakan edit berita dan ubah statusnya menjadi "Publish".
+                    </div>
+                </div>
+            `;
                 return;
             }
 
             // Ambil 3 berita terbaru
-            const recentNews = newsList.slice(0, 3);
-
+            const recentNews = publishedNews.slice(0, 3);
             container.innerHTML = recentNews.map(news => {
                 const categoryClass = getCategoryClass(news.category);
-
                 return `
-            <div class="berita-card">
-                <div class="berita-img">
-                    <img src="${news.image}" alt="${news.title}">
-                    <span class="berita-kategori ${categoryClass}">${news.category}</span>
-                </div>
-                <div class="berita-content">
-                    <div class="berita-tanggal">
-                        <i class="far fa-calendar-alt"></i>
-                        <span>${formatDate(news.date)}</span>
+                <div class="berita-card">
+                    <div class="berita-img">
+                        <img src="${news.image || 'https://picsum.photos/seed/news' + news.id + '/600/400.jpg'}" alt="${news.title}">
+                        <span class="berita-kategori ${categoryClass}">${formatCategoryName(news.category)}</span>
                     </div>
-                    <h3>${news.title}</h3>
-                    <p>${news.content.substring(0, 150)}${news.content.length > 150 ? '...' : ''}</p>
-                    <a href="<?php echo e(route('berita')); ?>" onclick="showNewsTab()" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    <div class="berita-content">
+                        <div class="berita-tanggal">
+                            <i class="far fa-calendar-alt"></i>
+                            <span>${formatDate(news.date)}</span>
+                        </div>
+                        <h3>${news.title}</h3>
+                        <p>${news.content ? news.content.substring(0, 150) + (news.content.length > 150 ? '...' : '') : ''}</p>
+                        <a href="<?php echo e(route('berita')); ?>" onclick="showNewsDetail(${news.id}); return false;" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                    </div>
                 </div>
-            </div>
-        `;
+            `;
             }).join('');
+
+            console.log('Berita berhasil dimuat');
         }
 
         // Fungsi untuk mendapatkan kelas CSS berdasarkan kategori
@@ -2363,464 +1671,212 @@
                 'event': 'bg-warning',
                 'pencegahan': 'bg-info',
                 'penelitian': 'bg-danger',
-                'gizi': 'bg-secondary'
+                'gizi': 'bg-secondary',
+                'fasilitas': 'bg-info',
+                'layanan': 'bg-primary',
+                'prestasi': 'bg-success'
             };
             return categoryMap[category] || 'bg-secondary';
         }
 
-        // Fungsi untuk mendapatkan HTML berita contoh
-        function getSampleBeritaHTML() {
-            return `
-        <div class="berita-card">
-            <div class="berita-img">
-                <img src="https://images.unsplash.com/photo-1616281177739-2a8192c2421d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Berita Kesehatan">
-                <span class="berita-kategori bg-info">Pencegahan</span>
-            </div>
-            <div class="berita-content">
-                <div class="berita-tanggal">
-                    <i class="far fa-calendar-alt"></i>
-                    <span>15 Mei 2023</span>
-                </div>
-                <h3>Tips Menjaga Kesehatan Jantung di Tengah Kesibukan</h3>
-                <p>Dalam kehidupan modern yang penuh dengan kesibukan, menjaga kesehatan jantung menjadi semakin penting. Berikut adalah beberapa tips sederhana namun efektif untuk menjaga kesehatan jantung Anda...</p>
-                <a href="<?php echo e(route('berita')); ?>" onclick="showNewsTab()" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="berita-card">
-            <div class="berita-img">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Berita Kesehatan">
-                <span class="berita-kategori bg-danger">Penelitian</span>
-            </div>
-            <div class="berita-content">
-                <div class="berita-tanggal">
-                    <i class="far fa-calendar-alt"></i>
-                    <span>10 Mei 2023</span>
-                </div>
-                <h3>Terobosan Baru dalam Pengobatan Kanker</h3>
-                <p>Tim peneliti kami berhasil menemukan metode baru dalam pengobatan kanker yang lebih efektif dengan efek samping yang minimal. Penemuan ini diharapkan dapat membantu banyak pasien kanker di seluruh dunia...</p>
-                <a href="<?php echo e(route('berita')); ?>" onclick="showNewsTab()" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-        <div class="berita-card">
-            <div class="berita-img">
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Berita Kesehatan">
-                <span class="berita-kategori bg-secondary">Gizi</span>
-            </div>
-            <div class="berita-content">
-                <div class="berita-tanggal">
-                    <i class="far fa-calendar-alt"></i>
-                    <span>5 Mei 2023</span>
-                </div>
-                <h3>Panduan Gizi Seimbang untuk Anak-anak</h3>
-                <p>Nutrisi yang tepat sangat penting untuk tumbuh kembang anak. Ahli gizi kami membagikan panduan lengkap tentang cara menyusun menu gizi seimbang untuk anak-anak sesuai dengan usia mereka...</p>
-                <a href="<?php echo e(route('berita')); ?>" onclick="showNewsTab()" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    `;
-        }
-
-        // Fungsi untuk menampilkan berita terkini di dashboard
-        function loadRecentNews() {
-            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-            const container = document.getElementById('recentNewsList');
-
-            if (newsList.length === 0) {
-                container.innerHTML = `
-            <div class="text-center py-4">
-                <i class="fas fa-newspaper fa-2x text-muted mb-2"></i>
-                <p class="text-muted mb-0">Belum ada berita terkini</p>
-            </div>
-        `;
-                return;
-            }
-
-            // Ambil 3 berita terbaru
-            const recentNews = newsList.slice(0, 3);
-
-            container.innerHTML = recentNews.map(news => {
-                const categoryClass = getCategoryClass(news.category);
-
-                return `
-            <div class="news-item mb-3 pb-3 border-bottom">
-                <div class="d-flex justify-content-between align-items-start">
-                    <div class="flex-grow-1">
-                        <h6 class="mb-1">${news.title}</h6>
-                        <div class="d-flex align-items-center mb-2">
-                            <span class="badge ${categoryClass} me-2">${news.category}</span>
-                            <small class="text-muted">
-                                <i class="far fa-calendar me-1"></i> ${formatDate(news.date)}
-                                ${news.author ? `<i class="fas fa-user ms-2 me-1"></i>${news.author}` : ''}
-                            </small>
-                        </div>
-                        <p class="mb-0 text-muted">${news.content.substring(0, 100)}${news.content.length > 100 ? '...' : ''}</p>
-                    </div>
-                    ${news.image ? `<img src="${news.image}" alt="${news.title}" class="img-thumbnail ms-3" style="width: 80px; height: 80px; object-fit: cover;">` : ''}
-                </div>
-            </div>
-        `;
-            }).join('');
-        }
-
-        // Fungsi untuk update statistik berita
-        function updateNewsStats() {
-            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-            document.getElementById('totalNews').textContent = newsList.length;
-        }
-
-        // Fungsi untuk menampilkan tab berita
-        function showNewsTab() {
-            document.getElementById('news-tab').click();
-        }
-
-        // Fungsi untuk menyimpan berita
-        function saveNews() {
-            const newsId = document.getElementById('newsId').value;
-            const title = document.getElementById('newsTitle').value;
-            const category = document.getElementById('newsCategory').value;
-            const content = document.getElementById('newsContent').value;
-            const date = document.getElementById('newsDate').value;
-            const imageInput = document.getElementById('newsImage');
-
-            // Validasi form
-            if (!title || !category || !content || !date) {
-                showToast('Harap lengkapi semua field yang diperlukan', 'danger');
-                return;
-            }
-
-            // Ambil data berita dari localStorage
-            let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-
-            // Proses gambar jika ada
-            if (imageInput.files && imageInput.files[0]) {
-                // Validasi ukuran file (maks 2MB)
-                if (imageInput.files[0].size > 2 * 1024 * 1024) {
-                    showToast('Ukuran gambar maksimal 2MB', 'danger');
-                    return;
-                }
-
-                // Baca file sebagai base64
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const imageData = e.target.result;
-
-                    if (newsId) {
-                        // Update berita yang ada
-                        updateNews(newsId, title, category, content, date, imageData);
-                    } else {
-                        // Tambah berita baru
-                        addNews(title, category, content, date, imageData);
-                    }
-                };
-                reader.readAsDataURL(imageInput.files[0]);
-            } else {
-                if (newsId) {
-                    // Update berita yang ada tanpa mengubah gambar
-                    updateNews(newsId, title, category, content, date, null);
-                } else {
-                    // Tambah berita baru tanpa gambar
-                    addNews(title, category, content, date, null);
-                }
-            }
-        }
-
-        // Fungsi untuk menambah berita baru
-        function addNews(title, category, content, date, image) {
-            let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-
-            const newNews = {
-                id: Date.now(),
-                title,
-                category,
-                content,
-                date,
-                image: image || `https://picsum.photos/seed/news${Date.now()}/600/400.jpg`,
-                createdAt: new Date().toISOString(),
-                author: currentUser.name // Tambahkan author
+        // Fungsi untuk memformat nama kategori
+        function formatCategoryName(category) {
+            const categoryNames = {
+                'pengumuman': 'Pengumuman',
+                'kesehatan': 'Kesehatan',
+                'event': 'Event',
+                'pencegahan': 'Pencegahan',
+                'penelitian': 'Penelitian',
+                'gizi': 'Gizi',
+                'fasilitas': 'Fasilitas',
+                'layanan': 'Layanan',
+                'prestasi': 'Prestasi'
             };
-
-            newsList.unshift(newNews);
-            localStorage.setItem('newsList', JSON.stringify(newsList));
-
-            // Tutup modal
-            const modalElement = document.getElementById('addNewsModal');
-            const modal = bootstrap.Modal.getInstance(modalElement);
-            modal.hide();
-
-            // Reset form
-            document.getElementById('newsForm').reset();
-            document.getElementById('newsImagePreview').style.display = 'none';
-
-            // Tampilkan notifikasi
-            showToast('Berita berhasil ditambahkan!', 'success');
-
-            // Refresh tampilan
-            loadNewsList();
-            loadRecentNews();
-            loadBeritaGrid();
-            updateNewsStats();
+            return categoryNames[category] || category;
         }
 
-        // Fungsi untuk menampilkan daftar berita di tab Berita
-        function loadNewsList() {
-            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-            const container = document.getElementById('newsList');
-
-            if (newsList.length === 0) {
-                container.innerHTML = `
-            <div class="text-center py-4">
-                <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
-                <p class="text-muted">Belum ada berita</p>
-            </div>
-        `;
-                return;
-            }
-
-            container.innerHTML = newsList.map(news => {
-                const categoryClass = getCategoryClass(news.category);
-
-                return `
-            <div class="news-item mb-4 pb-4 border-bottom">
-                <div class="row">
-                    <div class="col-md-3">
-                        <img src="${news.image}" alt="${news.title}" class="img-fluid rounded">
-                    </div>
-                    <div class="col-md-9">
-                        <div class="d-flex justify-content-between align-items-start mb-2">
-                            <h5>${news.title}</h5>
-                            <div>
-                                <span class="badge ${categoryClass} me-2">${news.category}</span>
-                                <div class="btn-group btn-group-sm">
-                                    <button class="btn btn-outline-primary" onclick="editNews(${news.id})">
-                                        <i class="fas fa-edit"></i>
-                                    </button>
-                                    <button class="btn btn-outline-danger" onclick="deleteNews(${news.id})">
-                                        <i class="fas fa-trash"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-muted small mb-2">
-                            <i class="far fa-calendar me-1"></i> ${formatDate(news.date)}
-                            ${news.author ? `<i class="fas fa-user ms-2 me-1"></i>${news.author}` : ''}
-                        </p>
-                        <p>${news.content.substring(0, 200)}${news.content.length > 200 ? '...' : ''}</p>
-                    </div>
-                </div>
-            </div>
-        `;
-            }).join('');
-        }
-
-        // Fungsi untuk edit berita
-        function editNews(id) {
-            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-            const news = newsList.find(item => item.id == id);
-
-            if (!news) {
-                showToast('Berita tidak ditemukan', 'danger');
-                return;
-            }
-
-            // Isi form dengan data berita
-            document.getElementById('newsId').value = news.id;
-            document.getElementById('newsTitle').value = news.title;
-            document.getElementById('newsCategory').value = news.category;
-            document.getElementById('newsContent').value = news.content;
-            document.getElementById('newsDate').value = news.date;
-
-            // Tampilkan preview gambar
-            const previewContainer = document.getElementById('newsImagePreview');
-            const previewImg = document.getElementById('previewNewsImg');
-            if (previewContainer && previewImg) {
-                previewImg.src = news.image;
-                previewContainer.style.display = 'block';
-            }
-
-            // Ubah judul modal
-            document.getElementById('addNewsModalLabel').innerHTML = '<i class="fas fa-edit me-2"></i>Edit Berita';
-
-            // Tampilkan modal
-            const modalElement = document.getElementById('addNewsModal');
-            const modal = new bootstrap.Modal(modalElement);
-            modal.show();
-        }
-
-        // Fungsi untuk update berita
-        function updateNews(id, title, category, content, date, image) {
-            let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-            const newsIndex = newsList.findIndex(news => news.id == id);
-
-            if (newsIndex !== -1) {
-                newsList[newsIndex] = {
-                    ...newsList[newsIndex],
-                    title,
-                    category,
-                    content,
-                    date,
-                    image: image || newsList[newsIndex].image,
-                    updatedAt: new Date().toISOString()
-                };
-
-                localStorage.setItem('newsList', JSON.stringify(newsList));
-
-                // Tutup modal
-                const modalElement = document.getElementById('addNewsModal');
-                const modal = bootstrap.Modal.getInstance(modalElement);
-                modal.hide();
-
-                // Reset form
-                document.getElementById('newsForm').reset();
-                document.getElementById('newsImagePreview').style.display = 'none';
-
-                // Tampilkan notifikasi
-                showToast('Berita berhasil diperbarui!', 'success');
-
-                // Refresh tampilan
-                loadNewsList();
-                loadRecentNews();
-                loadBeritaGrid();
-            }
-        }
-
-        // Fungsi untuk menghapus berita
-        function deleteNews(id) {
-            if (confirm('Apakah Anda yakin ingin menghapus berita ini?')) {
-                let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-                newsList = newsList.filter(news => news.id != id);
-                localStorage.setItem('newsList', JSON.stringify(newsList));
-
-                // Tampilkan notifikasi
-                showToast('Berita berhasil dihapus!', 'success');
-
-                // Refresh tampilan
-                loadNewsList();
-                loadRecentNews();
-                loadBeritaGrid();
-                updateNewsStats();
-            }
-        }
-
-        // Fungsi untuk menampilkan notifikasi toast
-        function showToast(message, type = 'success') {
-            // Buat elemen toast
-            const toastContainer = document.createElement('div');
-            toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
-            toastContainer.style.zIndex = '1050';
-            const toastHTML = `
-        <div class="toast align-items-center text-white bg-${type}" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="d-flex">
-                <div class="toast-body">
-                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>
-                    ${message}
-                </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-        </div>
-    `;
-            toastContainer.innerHTML = toastHTML;
-            document.body.appendChild(toastContainer);
-
-            // Tampilkan toast
-            const toastElement = toastContainer.querySelector('.toast');
-            const toast = new bootstrap.Toast(toastElement, { autohide: true, delay: 5000 });
-            toast.show();
-
-            // Hapus container toast setelah toast ditutup
-            toastElement.addEventListener('hidden.bs.toast', function () {
-                toastContainer.remove();
-            });
+        // Fungsi untuk menampilkan detail berita
+        function showNewsDetail(newsId) {
+            console.log('Menampilkan detail berita ID:', newsId);
+            sessionStorage.setItem('selectedNewsId', newsId);
+            window.location.href = "<?php echo e(route('berita')); ?>";
         }
 
         // Format tanggal
         function formatDate(dateString) {
+            if (!dateString) return 'Tanggal tidak tersedia';
             const options = { day: 'numeric', month: 'short', year: 'numeric' };
             return new Date(dateString).toLocaleDateString('id-ID', options);
         }
 
-        // Tambahkan di fungsi loadDashboard()
-        function loadDashboard() {
-            // Update info user
-            document.getElementById('welcomeUser').textContent = currentUser.name;
-            document.getElementById('patientName').textContent = currentUser.name;
-            document.getElementById('patientPhone').textContent = currentUser.phone;
-            document.getElementById('patientAge').textContent = calculateAge(currentUser.dob);
+        // Fungsi untuk membuat berita contoh
+        function createSampleNews() {
+            console.log('Membuat berita contoh...');
 
-            // Update statistik
-            document.getElementById('upcomingAppointments').textContent = currentUser.appointments.filter(a => a.status === 'confirmed').length;
-            document.getElementById('medicalRecords').textContent = currentUser.medicalRecords.length;
-            document.getElementById('labResults').textContent = '3';
-            document.getElementById('pendingBills').textContent = currentUser.billing.filter(b => b.status === 'pending').length;
+            const sampleNews = {
+                id: Date.now(),
+                title: "RSUD Daha Husada Meluncurkan Layanan Telemedicine",
+                category: "layanan",
+                content: "RSUD Daha Husada dengan bangga mengumumkan peluncuran layanan telemedicine terbaru. Layanan ini memungkinkan pasien untuk berkonsultasi dengan dokter secara online tanpa harus datang ke rumah sakit. Ini adalah langkah inovatif untuk meningkatkan akses layanan kesehatan bagi masyarakat.",
+                date: new Date().toISOString().split('T')[0],
+                image: "https://images.unsplash.com/photo-1616281177739-2a8192c2421d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                author: "Admin RSUD",
+                status: "publish",
+                createdAt: new Date().toISOString()
+            };
 
-            // Load berita
-            loadBeritaGrid();
-            loadRecentNews();
-            updateNewsStats();
+            let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            newsList.unshift(sampleNews);
+            localStorage.setItem('newsList', JSON.stringify(newsList));
 
-            // Load janji temu
-            loadAppointments();
-            // Load rekam medis
-            loadMedicalRecords();
-            // Load tagihan
-            loadBilling();
-            // Load profil
-            loadProfile();
+            console.log('Berita contoh berhasil dibuat');
+            alert('Berita contoh berhasil dibuat! Halaman akan di-refresh.');
+            location.reload();
         }
 
         // Event listener
         document.addEventListener('DOMContentLoaded', function () {
-            // Preview gambar berita
-            const newsImageInput = document.getElementById('newsImage');
-            const newsImagePreview = document.getElementById('newsImagePreview');
-            const previewNewsImg = document.getElementById('previewNewsImg');
-
-            if (newsImageInput && previewNewsImg) {
-                newsImageInput.addEventListener('change', function () {
-                    if (this.files && this.files[0]) {
-                        const reader = new FileReader();
-                        reader.onload = function (e) {
-                            previewNewsImg.src = e.target.result;
-                            newsImagePreview.style.display = 'block';
-                        }
-                        reader.readAsDataURL(this.files[0]);
-                    }
-                });
-            }
-
-            // Reset form saat modal ditutup
-            const addNewsModal = document.getElementById('addNewsModal');
-            if (addNewsModal) {
-                addNewsModal.addEventListener('hidden.bs.modal', function () {
-                    document.getElementById('newsForm').reset();
-                    document.getElementById('newsImagePreview').style.display = 'none';
-                    document.getElementById('addNewsModalLabel').innerHTML = '<i class="fas fa-newspaper me-2"></i>Tambah Berita Baru';
-                });
-            }
-
-            // Event listener untuk tombol simpan berita
-            const saveNewsBtn = document.getElementById('saveNewsBtn');
-            if (saveNewsBtn) {
-                saveNewsBtn.addEventListener('click', saveNews);
-            }
+            console.log('DOM dimuat, mempersiapkan berita...');
 
             // Load data saat halaman dimuat
             if (document.getElementById('beritaGrid')) {
                 loadBeritaGrid();
             }
-            if (document.getElementById('recentNewsList')) {
-                loadRecentNews();
+
+            // Cek apakah ada ID berita yang tersimpan (untuk halaman detail)
+            const selectedNewsId = sessionStorage.getItem('selectedNewsId');
+            if (selectedNewsId && document.getElementById('newsDetailContainer')) {
+                console.log('Menampilkan detail berita untuk ID:', selectedNewsId);
+                const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+                const news = newsList.find(item => item.id == selectedNewsId);
+
+                if (news) {
+                    // Tampilkan detail berita
+                    const categoryClass = getCategoryClass(news.category);
+                    document.getElementById('newsDetailContainer').innerHTML = `
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>${news.title}</h2>
+                            <div class="d-flex align-items-center mt-2">
+                                <span class="badge ${categoryClass} me-2">${formatCategoryName(news.category)}</span>
+                                <small class="text-muted">
+                                    <i class="far fa-calendar me-1"></i> ${formatDate(news.date)}
+                                    ${news.author ? `<i class="fas fa-user ms-2 me-1"></i>${news.author}` : ''}
+                                </small>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            ${news.image ? `<img src="${news.image}" class="img-fluid rounded mb-4" alt="${news.title}">` : ''}
+                            <div class="news-content">
+                                ${news.content ? news.content.replace(/\n/g, '<br>') : ''}
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <button onclick="history.back()" class="btn btn-outline-secondary">
+                                <i class="fas fa-arrow-left me-2"></i>Kembali
+                            </button>
+                        </div>
+                    </div>
+                `;
+                } else {
+                    document.getElementById('newsDetailContainer').innerHTML = `
+                    <div class="alert alert-warning">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Berita tidak ditemukan
+                    </div>
+                `;
+                }
+
+                sessionStorage.removeItem('selectedNewsId');
             }
-            if (document.getElementById('newsList')) {
-                loadNewsList();
+
+            // Jika halaman semua berita dimuat, tampilkan semua berita
+            if (document.getElementById('allNewsContainer')) {
+                loadAllNews();
             }
-            updateNewsStats();
         });
+
+        // Fungsi untuk menampilkan semua berita di halaman berita
+        function loadAllNews() {
+            console.log('Memuat semua berita...');
+            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            const container = document.getElementById('allNewsContainer');
+
+            // Filter berita yang statusnya "publish" atau tidak ada status
+            const publishedNews = newsList.filter(news => {
+                return !news.status || news.status === 'publish';
+            });
+
+            if (publishedNews.length === 0) {
+                container.innerHTML = `
+                <div class="text-center py-5">
+                    <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
+                    <h5>Belum Ada Berita</h5>
+                    <p class="text-muted">Belum ada berita yang dipublikasikan</p>
+                    <button class="btn btn-primary" onclick="createSampleNews()">
+                        <i class="fas fa-plus me-2"></i>Buat Berita Contoh
+                    </button>
+                </div>
+            `;
+                return;
+            }
+
+            container.innerHTML = publishedNews.map(news => {
+                const categoryClass = getCategoryClass(news.category);
+                return `
+                <div class="card mb-4">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src="${news.image || 'https://picsum.photos/seed/news' + news.id + '/600/400.jpg'}" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="${news.title}">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <h5 class="card-title">${news.title}</h5>
+                                    <span class="badge ${categoryClass}">${formatCategoryName(news.category)}</span>
+                                </div>
+                                <p class="text-muted small mb-3">
+                                    <i class="far fa-calendar me-1"></i> ${formatDate(news.date)}
+                                    ${news.author ? `<i class="fas fa-user ms-2 me-1"></i>${news.author}` : ''}
+                                </p>
+                                <p class="card-text">${news.content ? news.content.substring(0, 200) + (news.content.length > 200 ? '...' : '') : ''}</p>
+                                <a href="#" onclick="showNewsDetail(${news.id}); return false;" class="btn btn-primary">Baca Selengkapnya</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            }).join('');
+        }
+
+        // Fungsi untuk memeriksa dan memperbaiki data berita
+        function checkAndFixNewsData() {
+            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+
+            // Periksa setiap berita
+            newsList.forEach(news => {
+                // Pastikan ada field status
+                if (!news.status) {
+                    news.status = 'publish';
+                    console.log('Memperbaiki berita:', news.title, 'menambah status: publish');
+                }
+
+                // Pastikan ada field image
+                if (!news.image) {
+                    news.image = 'https://picsum.photos/seed/news' + news.id + '/600/400.jpg';
+                    console.log('Memperbaiki berita:', news.title, 'menambah gambar default');
+                }
+            });
+
+            // Simpan kembali
+            localStorage.setItem('newsList', JSON.stringify(newsList));
+            console.log('Data berita telah diperbaiki');
+        }
+
+        // Jalankan pemeriksaan saat halaman dimuat
+        checkAndFixNewsData();
     </script>
 
-    <?php if(auth()->guard()->check()): ?>
-        <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
-            <?php echo csrf_field(); ?>
-        </form>
-    <?php endif; ?>
 </body>
 
 </html><?php /**PATH /Users/bilalabdillah/Documents/klinik-laravel/resources/views/index.blade.php ENDPATH**/ ?>

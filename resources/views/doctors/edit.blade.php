@@ -1,4 +1,11 @@
 @extends('layouts.app')
+@if(!isset($doctor))
+    <div class="alert alert-danger">
+        Data dokter tidak ditemukan! <a href="{{ route('doctors.admin') }}" class="alert-link">Kembali ke halaman admin</a>
+    </div>
+@else
+    <!-- Kode form edit Anda yang ada di sini -->
+@endif
 
 @section('content')
 <div class="container">

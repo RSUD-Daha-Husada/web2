@@ -61,6 +61,8 @@ Route::middleware(['web', 'auth'])->prefix('admin')->name('admin.')->group(funct
 });
 
 // Public routes
+Route::get('/doctors/{id}/edit', [DoctorController::class, 'edit'])->name('doctors.edit');
+Route::get('/doctors/admin', [DoctorController::class, 'admin'])->name('doctors.admin');
 Route::get('/doctors', [DoctorController::class, 'user'])->name('doctors.public');
 Route::get('/patient-portal', function () {
     return view('patient_portal');
