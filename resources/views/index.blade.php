@@ -5,1050 +5,67 @@
     <meta charset="utf-8" />
     <title>Rumah Sakit Daha Husada</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="Website RS Daha Husada" name="description" />
-    <meta content="Daha Husada" name="author" />
+    <meta name="description" content="Website RS Daha Husada">
+    <meta name="author" content="Daha Husada">
+
+    <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/favicon.ico">
+
     <!-- CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('style.css') }}">
-    <!-- Tambahkan di <head> -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="{{ asset('index.css') }}" rel="stylesheet">
+    
+
+    <!-- AOS untuk animasi (opsional, bisa dihapus kalau nggak pakai) -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
-    <!-- Tambahkan sebelum </body> -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            once: true  // supaya animasi hanya jalan sekali saat scroll
-        });
-    </script>
     <!-- JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+    </script>
 </head>
+<body>
 <!-- Modern RS Daha Husada Navbar -->
-<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
-    <div class="container-fluid">
-        <div class="col-2 col-sm-2 col-md-1 d-flex justify-content-center align-items-center mb-3 mb-sm-0">
-            <div class="logo-container">
-                <img src="logo1.jpeg" alt="Logo Rumah Sakit" class="logo-image" />
-            </div>
-        </div>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
-            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav ms-auto align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" style="font-size: 1.1rem; font-weight: 500;">
-                        Beranda
-                    </a>
-                </li>
-                <!-- Profil Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1.1rem; font-weight: 500;">
-                        Profil
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="profilDropdown">
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>Tentang Kami</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-eye me-2"></i>Visi & Misi</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-sitemap me-2"></i>Struktur Organisasi</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-tasks me-2"></i>Tugas Pokok & Fungsi</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-users me-2"></i>Direktur & Jajaran</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-map-marker-alt me-2"></i>Alamat &
-                                Lokasi</a></li>
-                    </ul>
-                </li>
-                <!-- Pelayanan Medik Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 1rem; font-weight: 500;">
-                        Pelayanan medik
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="medikDropdown">
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-ambulance me-2"></i>IGD</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fas fa-clinic-medical me-2"></i>Rawat Jalan</a>
-                        </li>
-                </li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-heart me-2"></i>Rawat Inap Intensif</a>
-                </li>
-                <li><a class="dropdown-item" href="#"><i class="fas fa-user-md me-2"></i>Pelayanan Bedah</a>
-                </li>
-            </ul>
-            </li>
-            <!-- Penunjang Medik Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false" style="font-size: 1rem; font-weight: 500;">
-                    Penunjang mendik
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="penunjangDropdown">
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-vial me-2"></i>Lab Patologi Klinik</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-x-ray me-2"></i>Radiologi</a></li>
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-dumbbell me-2"></i>Rehabilitasi Medik</a>
-                    </li>
-                </ul>
-            </li>
-            <!-- Informasi Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="profilDropdown" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false" style="font-size: 1rem; font-weight: 500;">
-                    Informasi
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="informasiDropdown">
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-calendar-plus me-2"></i>Pendaftaran
-                            Online</a></li>
-                    <li><a class="dropdown-item" href="{{ route('ketersediaan_bed') }}"><i class="fas fa-bed me-2"></i>
-                            Ketersediaan Bed</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-money-bill me-2"></i>Tarif Dasar</a></li>
-                    <li><a class="dropdown-item" href="/doctors"><i class="fas fa-user-doctor me-2"></i>Dokter</a>
-                    </li>
-                    <li><a class="dropdown-item" href="#"><i class="fas fa-newspaper me-2"></i>Artikel Kesehatan</a>
-                    </li>
-                    <li><a class="dropdown-item" href="{{ route('berita') }}"><i
-                                class="fas fa-bullhorn me-2"></i>Berita</a></li>
-                </ul>
-            </li>
-            <!-- PPID -->
-            <li class="nav-item">
-                <a class="nav-link" href="https://ppid.rsuddahahusada.jatimprov.go.id"
-                    style="font-size: 1.1rem; font-weight: 500;">
-                    PPID
-                </a>
-            </li>
-            <!-- Inovasi Daha -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="inovasiDropdown" role="button">
-                    Inovasi Daha
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="inovasiDropdown">
-                    <!-- Submenu LAYANAN -->
-                    <li class="dropdown-submenu">
-                        <a class="dropdown-item" href="#">LAYANAN</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">HALO AMDA</a></li>
-                            <li><a class="dropdown-item" href="#">SI DAMPING</a></li>
-                            <li><a class="dropdown-item" href="#">MAKASI MAMI</a></li>
-                            <li><a class="dropdown-item" href="#">INSAP</a></li>
-                            <li><a class="dropdown-item" href="#">SI IMUT</a></li>
-                            <li><a class="dropdown-item" href="#">DATAJAKA</a></li>
-                            <li><a class="dropdown-item" href="#">BUDAYA KESELAMATAN KERJA</a></li>
-                            <li><a class="dropdown-item" href="#">PADUAN</a></li>
-                        </ul>
-                    </li>
+<x-index.navbar />
 
-                    <!-- Submenu INFORMASI -->
-                    <li class="dropdown-submenu">
-                        <a class="dropdown-item" href="#">INFORMASI</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">SI PANDAKITA</a></li>
-                            <li><a class="dropdown-item" href="#">SI DWOR</a></li>
-                            <li><a class="dropdown-item" href="#">PANDUAN SI PANDA KITA DAN SI DWOR</a></li>
-                            <li><a class="dropdown-item" href="#">SKDR</a></li>
-                            <li><a class="dropdown-item" href="#">LAPORAN SI IKM</a></li>
-                            <li><a class="dropdown-item" href="#">JADWAL DOKTER</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-            <!-- Pengaduan -->
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/pengaduan') }}" style="font-size: 1.1rem; font-weight: 500;">
-                    Pengaduan
-                </a>
-            </li>
-            </ul>
-            <!-- Action Buttons -->
-            <div class="header-btn-grp ms-lg-4 d-flex flex-row gap-2 flex-wrap">
-                <div class="header-btn-grp ms-lg-4 d-flex flex-row gap-2 flex-wrap">
-                    <a href="#" class="btn-custom btn-success-custom">
-                        <i class="fas fa-calendar-check me-2"></i> Daftar Online
-                    </a>
-                    <a href="{{ route('hubungi.kami') }}" class="btn-custom btn-primary-custom">
-                        <i class="fab fa-whatsapp me-2"></i> Hubungi Kami
-                    </a>
-                </div>
-                <a href="{{ route('patient.portal') }}" style="
-      background:#1E90FF; /* biru elegan */
-      border:none;
-      color:white;
-      padding:10px 28px; /* lebih kecil dari sebelumnya */
-      font-size:1rem; /* lebih kecil biar pas */
-      font-weight:600;
-      border-radius:10px;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      text-transform:uppercase;
-      text-decoration:none;
-      margin-left:100px; 
-      box-shadow:0 3px 8px rgba(0,0,0,0.25);
-      transition:all 0.3s ease;
-   " onmouseover="this.style.background='#187bcd'; this.style.boxShadow='0 5px 12px rgba(0,0,0,0.35)';"
-                    onmouseout="this.style.background='#1E90FF'; this.style.boxShadow='0 3px 8px rgba(0,0,0,0.25)';">
-                    <i class="fas fa-user-md me-2"></i> PATIENT PORTAL
-                </a>
-            </div>
-        </div>
-    </div>
-</nav>
 <!-- Hero Section -->
-<section class="hero-section" id="home">
-    <div class="hero-overlay"></div>
-    <div class="container position-relative">
-        <div class="row align-items-center">
-            <div class="col-lg-6">
-                <div class="hero-content" data-aos="fade-right" data-aos-duration="1000">
-                    <div class="hero-badge mb-4">
-                        <span class="badge">
-                            <i class="fas fa-award"></i>
-                            69+ Tahun Pengalaman
-                        </span>
-                    </div>
-                    <h1 class="hero-title mb-4 text-white">
-                        <span class="text-white">Selamat Datang</span> di Website Resmi Daerah Umum
-                        <span id="typing-effect" class="typing-effect text-warning"></span>
-                    </h1>
-                    <p class="hero-description">
-                        Memberikan pelayanan kesehatan terbaik dengan teknologi modern dan tenaga medis berpengalaman
-                        untuk keluarga Indonesia.
-                    </p>
-                    <div class="hero-actions d-flex flex-wrap gap-3">
-                        <a href="#register" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">
-                            <i class="fas fa-user-plus me-2"></i>Daftar Sekarang
-                        </a>
-                        <a href="#appointment" class="btn btn-outline-primary" data-aos="fade-up" data-aos-delay="400">
-                            <i class="fas fa-calendar-check me-2"></i>Book Appointment
-                        </a>
-                    </div>
-                    <div class="trust-indicators mt-5" data-aos="fade-up" data-aos-delay="600">
-                        <div class="row text-center">
-                            <div class="col-4">
-                                <div class="trust-item">
-                                    <h4 class="text-warning mb-1">24/7</h4>
-                                    <small>Emergency Care</small>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="trust-item">
-                                    <h4 class="text-success mb-1">100+</h4>
-                                    <small>Expert Doctors</small>
-                                </div>
-                            </div>
-                            <div class="col-4">
-                                <div class="trust-item">
-                                    <h4 class="text-warning mb-1">50K+</h4>
-                                    <small>Happy Patients</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="hero-image-wrapper position-relative" data-aos="fade-left" data-aos-duration="1000">
-                    <img src="https://images.unsplash.com/photo-1551190822-a9333d879b1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Daha Husada Hospital" class="img-fluid hero-main-image zoom-in-out">
-
-                    <!-- Floating Cards -->
-                    <div class="floating-card floating-card-1" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card border-0">
-                            <div class="card-body p-3">
-                                <div class="d-flex align-items-center">
-                                    <div class="icon-circle bg-success me-3">
-                                        <i class="fas fa-heartbeat text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-0">Heart Rate</h6>
-                                        <small class="text-muted">98 BPM</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="floating-card floating-card-2" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card border-0">
-                            <div class="card-body p-3">
-                                <div class="d-flex align-items-center">
-                                    <div class="icon-circle bg-primary me-3">
-                                        <i class="fas fa-user-md text-white"></i>
-                                    </div>
-                                    <div>
-                                        <h6 class="mb-0">Available Now</h6>
-                                        <small class="text-muted">15 Doctors Online</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Animated Background Elements -->
-    <div class="hero-shapes">
-        <div class="shape-1"></div>
-        <div class="shape-2"></div>
-        <div class="shape-3"></div>
-    </div>
-</section>
+<x-index.hero />
 
 <!-- Doctors Section -->
-<section class="doctors-section py-5" id="doctors">
-    <div class="container">
-        <div class="floating-elements">
-            <i class="fas fa-stethoscope floating-icon"></i>
-            <i class="fas fa-heartbeat floating-icon"></i>
-            <i class="fas fa-user-md floating-icon"></i>
-            <i class="fas fa-hospital floating-icon"></i>
-        </div>
-
-        <div class="text-center mb-5">
-            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Dokter Spesialis Rumah Sakit Daha Husada
-            </h2>
-            <p class="section-description" data-aos="fade-up" data-aos-delay="200">
-                Berikut adalah daftar dokter spesialis yang siap melayani Anda dengan keahlian dan pengalaman terbaik
-                untuk kesehatan optimal keluarga.
-            </p>
-        </div>
-        <div class="doctors-grid">
-            <!-- Dokter 1 -->
-            <div class="doctor-card" data-aos="zoom-in" data-aos-delay="100">
-                <div class="doctor-image-wrapper">
-                    <img src="https://randomuser.me/api/portraits/men/11.jpg" class="doctor-image"
-                        alt="dr. Andi Prasetyo">
-                    <div class="doctor-overlay">
-                        <button class="btn btn-light view-profile-btn" onclick="showDoctorProfile(0)">
-                            <i class="fas fa-eye me-2"></i>Lihat Profil
-                        </button>
-                    </div>
-                </div>
-                <div class="doctor-info">
-                    <h5>dr. Andi Prasetyo, Sp.PD</h5>
-                    <p class="doctor-specialty">Spesialis Penyakit Dalam</p>
-                </div>
-            </div>
-            <!-- Dokter 2 -->
-            <div class="doctor-card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="doctor-image-wrapper">
-                    <img src="https://randomuser.me/api/portraits/women/12.jpg" class="doctor-image"
-                        alt="dr. Nina Kartika">
-                    <div class="doctor-overlay">
-                        <button class="btn btn-light view-profile-btn" onclick="showDoctorProfile(1)">
-                            <i class="fas fa-eye me-2"></i>Lihat Profil
-                        </button>
-                    </div>
-                </div>
-                <div class="doctor-info">
-                    <h5>dr. Nina Kartika, Sp.JP</h5>
-                    <p class="doctor-specialty">Spesialis Jantung & Pembuluh Darah</p>
-                </div>
-            </div>
-            <!-- Dokter 3 -->
-            <div class="doctor-card" data-aos="zoom-in" data-aos-delay="300">
-                <div class="doctor-image-wrapper">
-                    <img src="https://randomuser.me/api/portraits/men/15.jpg" class="doctor-image"
-                        alt="dr. Rahman Fadli">
-                    <div class="doctor-overlay">
-                        <button class="btn btn-light view-profile-btn" onclick="showDoctorProfile(2)">
-                            <i class="fas fa-eye me-2"></i>Lihat Profil
-                        </button>
-                    </div>
-                </div>
-                <div class="doctor-info">
-                    <h5>dr. Rahman Fadli, Sp.OG</h5>
-                    <p class="doctor-specialty">Spesialis Kandungan & Kebidanan</p>
-                </div>
-            </div>
-        </div>
-        <!-- Ubah dari -->
-        <div class="text-center mt-3">
-            <a href="/doctors" class="view-all-btn btn btn-primary">
-                <i class="fas fa-users me-2"></i> Lihat Semua Dokter
-            </a>
-        </div>
-    </div>
-</section>
+<x-index.doctors />
 
 <!-- Instagram Posts -->
+<x-index.instagram />
 
-<body>
-    <div class="center-container">
-        <h1 class="page-title">
-            <i class="fab fa-instagram"></i>Instagram Posts
-        </h1>
+<!-- Berita Preview Section -->
 
-        <div class="carousel-container">
-            <div class="carousel-nav prev" onclick="moveCarousel(-1)">
-                <i class="fas fa-chevron-left"></i>
-            </div>
-            <div class="carousel-nav next" onclick="moveCarousel(1)">
-                <i class="fas fa-chevron-right"></i>
-            </div>
-
-            <div class="posts-wrapper" id="postsWrapper">
-
-
-
-            </div>
-        </div>
-    </div>
-
-    <!-- Berita terkini -->
-    <section class="berita-preview">
-        <div class="berita-header">
-            <h2>Berita Terkini</h2>
-            <p>Tetap update dengan informasi kesehatan terbaru dari RSUD Daha Husada</p>
-        </div>
-        <div class="berita-grid" id="beritaGrid">
-            <!-- Berita akan dimuat di sini melalui JavaScript -->
-        </div>
-        <div class="berita-more-container">
-            <a href="{{ route('berita') }}" class="berita-more-button" style="
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 14px 32px;
-        border-radius: 50px;
-        font-size: 1rem;
-        font-weight: 600;
-        background: linear-gradient(45deg, #0066ff, #00c9ff);
-        color: white;
-        text-decoration: none;
-        box-shadow: 0 4px 15px rgba(0, 102, 255, 0.2);
-    ">
-                <span>Lihat Semua Berita</span>
-                <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
-    </section>
+<x-index.berita />
 
     <!-- Easy Solution Section -->
-    <section class="section" id="solutions">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title" data-aos="fade-up">4 Langkah Mudah Mendapat Perawatan Terbaik</h2>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="solution-card">
-                        <div class="card">
-                            <div class="icon-box mx-auto mb-4">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <h4>Registrasi Online</h4>
-                            <p>Daftarkan diri Anda dengan mudah melalui sistem online kami yang aman dan terpercaya.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="solution-card">
-                        <div class="card">
-                            <div class="icon-box mx-auto mb-4">
-                                <i class="fas fa-headphones-simple"></i>
-                            </div>
-                            <h4>Konsultasi</h4>
-                            <p>Dapatkan konsultasi awal dengan tim medis profesional kami kapan saja Anda butuhkan.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="solution-card">
-                        <div class="card">
-                            <div class="icon-box mx-auto mb-4">
-                                <i class="fas fa-calendar-check"></i>
-                            </div>
-                            <h4>Jadwal Appointment</h4>
-                            <p>Atur jadwal kunjungan Anda dengan fleksibel sesuai ketersediaan dokter spesialis.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="solution-card">
-                        <div class="card">
-                            <div class="icon-box mx-auto mb-4">
-                                <i class="fas fa-check-double"></i>
-                            </div>
-                            <h4>Perawatan Terbaik</h4>
-                            <p>Dapatkan perawatan medis terbaik dengan teknologi canggih dan pelayanan prima.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+     <x-index.solutions />
 
     <!-- About Section -->
-    <section class="section about-section" id="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <div class="row">
-                        <div class="col-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="about-count">
-                                <h3 class="text-green">250+</h3>
-                                <h6>Tempat Tidur Pasien</h6>
-                            </div>
-                        </div>
-                        <div class="col-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
-                            <div class="about-count">
-                                <h3 class="text-pink">150+</h3>
-                                <h6>Dokter & Perawat</h6>
-                            </div>
-                        </div>
-                        <div class="col-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
-                            <div class="about-count">
-                                <h3 class="text-primary">50K+</h3>
-                                <h6>Pasien Bahagia</h6>
-                            </div>
-                        </div>
-                        <div class="col-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
-                            <div class="about-count">
-                                <h3 class="text-blue">25+</h3>
-                                <h6>Tahun Pengalaman</h6>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div data-aos="fade-left" data-aos-duration="1000">
-                        <h6 class="section-subtitle">Tentang Kami</h6>
-                        <h2 class="section-title">Rumah Sakit Terpercaya dengan Pelayanan Prima</h2>
-                        <p class="section-description text-start">
-                            Dengan pengalaman lebih dari 25 tahun, Rumah Sakit Daha Husada telah menjadi pilihan utama
-                            masyarakat untuk mendapatkan pelayanan kesehatan terbaik. Kami dilengkapi dengan teknologi
-                            medis
-                            terdepan dan tenaga medis yang berpengalaman.
-                        </p>
-                        <a href="#appointment" class="btn btn-primary">
-                            <i class="fas fa-calendar-check me-2"></i>Book Appointment
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-index.about />
 
     <!-- Services Section -->
-    <section class="section service-section" id="services">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title text-white">Kami Menawarkan Berbagai Layanan untuk Kesehatan Anda</h2>
-            </div>
-            <div class="row">
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="service-card">
-                        <div class="service-icon mx-auto">
-                            <i class="fas fa-heart"></i>
-                        </div>
-                        <h4>Kardiologi</h4>
-                        <p>Pemeriksaan dan perawatan jantung oleh ahli kardiologi profesional dengan peralatan mutakhir.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="service-card">
-                        <div class="service-icon mx-auto">
-                            <i class="fas fa-brain"></i>
-                        </div>
-                        <h4>Neurologi</h4>
-                        <p>Pelayanan untuk kelainan sistem saraf dengan teknologi dan tim medis yang berpengalaman.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="service-card">
-                        <div class="service-icon mx-auto">
-                            <i class="fas fa-stethoscope"></i>
-                        </div>
-                        <h4>Rawat Jalan</h4>
-                        <p>Pelayanan rawat jalan yang cepat dan efisien untuk kebutuhan medis harian Anda.</p>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="service-card">
-                        <div class="service-icon mx-auto">
-                            <i class="fas fa-ambulance"></i>
-                        </div>
-                        <h4>Gawat Darurat</h4>
-                        <p>Layanan darurat 24/7 untuk menangani berbagai kasus medis mendesak dan kritis.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-index.services />
 
     <!-- Mitra kerjasama  -->
-    <section class="section partners-section" id="partners">
-        <div class="container">
-            <h2 class="trusted-title">Mitra Kerjasama</h2>
-
-            <!-- Baris 1: Bergerak ke kanan -->
-            <div class="trusted-row">
-                <div class="trusted-track trusted-track-right">
-                    <!-- Set pertama -->
-                    <div class="trusted-item">
-                        <img src="/bpjs-ketenagakerjaan-seeklogo.png" alt="BPJS" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BPJS</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/bri-life-seeklogo.png" alt="BRI" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BRI</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Admedika.png" alt="Admedika" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Admedika</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Biakes Maskin.png" alt="Biakes" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Biakes</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Jasa Raharja.png" alt="Jasa Raharja" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Jasa Raharja</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Taspen.png" alt="Taspen" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Taspen</div>
-                    </div>
-
-                    <!-- Set kedua (duplikat persis) -->
-                    <div class="trusted-item">
-                        <img src="/bpjs-ketenagakerjaan-seeklogo.png" alt="BPJS" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BPJS</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/bri-life-seeklogo.png" alt="BRI" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BRI</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Admedika.png" alt="Admedika" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Admedika</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Biakes Maskin.png" alt="Biakes" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Biakes</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Jasa Raharja.png" alt="Jasa Raharja" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Jasa Raharja</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Taspen.png" alt="Taspen" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Taspen</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Baris 2: Bergerak ke kiri -->
-            <div class="trusted-row">
-                <div class="trusted-track trusted-track-left">
-                    <!-- Set pertama -->
-                    <div class="trusted-item">
-                        <img src="/bpjs-ketenagakerjaan-seeklogo.png" alt="BPJS" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BPJS</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/bri-life-seeklogo.png" alt="BRI" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BRI</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Admedika.png" alt="Admedika" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Admedika</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Biakes Maskin.png" alt="Biakes" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Biakes</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Jasa Raharja.png" alt="Jasa Raharja" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Jasa Raharja</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Taspen.png" alt="Taspen" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Taspen</div>
-                    </div>
-
-                    <!-- Set kedua (duplikat persis) -->
-                    <div class="trusted-item">
-                        <img src="/bpjs-ketenagakerjaan-seeklogo.png" alt="BPJS" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BPJS</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/bri-life-seeklogo.png" alt="BRI" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BRI</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Admedika.png" alt="Admedika" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Admedika</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Biakes Maskin.png" alt="Biakes" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Biakes</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Jasa Raharja.png" alt="Jasa Raharja" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Jasa Raharja</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Taspen.png" alt="Taspen" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Taspen</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Baris 3: Bergerak ke kanan -->
-            <div class="trusted-row">
-                <div class="trusted-track trusted-track-right">
-                    <!-- Set pertama -->
-                    <div class="trusted-item">
-                        <img src="/bri-life-seeklogo.png" alt="BRI" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BRI</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Admedika.png" alt="Admedika" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Admedika</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Biakes Maskin.png" alt="Biakes" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Biakes</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Jasa Raharja.png" alt="Jasa Raharja" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Jasa Raharja</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Taspen.png" alt="Taspen" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Taspen</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/bpjs-ketenagakerjaan-seeklogo.png" alt="BPJS" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BPJS</div>
-                    </div>
-
-                    <!-- Set kedua (duplikat persis) -->
-                    <div class="trusted-item">
-                        <img src="/bri-life-seeklogo.png" alt="BRI" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BRI</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Admedika.png" alt="Admedika" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Admedika</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Biakes Maskin.png" alt="Biakes" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Biakes</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Jasa Raharja.png" alt="Jasa Raharja" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Jasa Raharja</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/Logo Taspen.png" alt="Taspen" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">Taspen</div>
-                    </div>
-                    <div class="trusted-item">
-                        <img src="/bpjs-ketenagakerjaan-seeklogo.png" alt="BPJS" class="trusted-logo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="trusted-fallback" style="display: none;">BPJS</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<x-index.kerjasama />
 
     <!-- FAQ Section -->
-    <section id="faq" class="section py-5 bg-light">
-        <div class="container">
-            <h2 class="section-title text-center mb-4 fw-bold text-success" data-aos="fade-up">Pertanyaan yang Sering
-                Diajukan</h2>
-            <div class="accordion" id="faqAccordion">
-                <!-- Pertanyaan 1 -->
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
-                    <h2 class="accordion-header" id="faq1">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                            Jam berapa layanan kunjungan pasien dibuka?
-                        </button>
-                    </h2>
-                    <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Kunjungan pasien dibuka setiap hari dari pukul <strong>09.00 hingga 20.00 WIB</strong>,
-                            dengan tetap memperhatikan protokol kesehatan.
-                        </div>
-                    </div>
-                </div>
-                <!-- Pertanyaan 2 -->
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
-                    <h2 class="accordion-header" id="faq2">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                            Apakah rumah sakit menerima BPJS dan asuransi lainnya?
-                        </button>
-                    </h2>
-                    <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Ya, kami menerima <strong>BPJS Kesehatan</strong> dan berbagai jenis asuransi swasta
-                            yang telah bekerja sama dengan rumah sakit kami.
-                        </div>
-                    </div>
-                </div>
-                <!-- Pertanyaan 3 -->
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
-                    <h2 class="accordion-header" id="faq3">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                            Bagaimana cara mendaftar layanan rawat jalan?
-                        </button>
-                    </h2>
-                    <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Pendaftaran dapat dilakukan secara langsung di bagian pendaftaran atau melalui sistem
-                            <strong>pendaftaran online</strong> di website resmi kami.
-                        </div>
-                    </div>
-                </div>
-                <!-- Pertanyaan 4 -->
-                <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
-                    <h2 class="accordion-header" id="faq4">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                            Apakah tersedia layanan IGD 24 jam?
-                        </button>
-                    </h2>
-                    <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Ya, Instalasi Gawat Darurat (IGD) Rumah Sakit Daha Husada buka <strong>24 jam setiap
-                                hari</strong>, termasuk hari libur nasional.
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-index.faq />
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="row">
-                    <!-- Widget 1: About -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-widget" data-aos="fade-up" data-aos-delay="100">
-                            <div class="footer-logo">
-                                <img src="logo.png" alt="RSUD Daha Husada Logo">
-                            </div>
-                            <div class="footer-about">
-                                <p>RSUD Daha Husada adalah rumah sakit umum daerah yang berkomitmen memberikan pelayanan
-                                    kesehatan terbaik dengan standar internasional dan teknologi medis modern.</p>
-                                <div class="footer-social">
-                                    <a href="https://www.facebook.com/rsud.dh/"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://x.com/search?q=%23RSUDAHAHUSADA&src=hashtag_click"><i
-                                            class="fab fa-twitter"></i></a>
-                                    <a href="https://www.instagram.com/rsud.dahahusada" target="_blank"><i
-                                            class="fab fa-instagram"></i></a>
-                                    <a href="https://www.tiktok.com/@rsud.dahahusada" target="_blank"><i
-                                            class="fab fa-tiktok"></i></a>
-                                    <a href="https://www.youtube.com/@rsuddahahusada6821"><i
-                                            class="fab fa-youtube"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Widget 2: Services -->
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-widget" data-aos="fade-up" data-aos-delay="200">
-                            <h3 class="footer-heading">Layanan</h3>
-                            <ul class="footer-links">
-                                <li><a href="#">Rawat Inap</a></li>
-                                <li><a href="#">Rawat Jalan</a></li>
-                                <li><a href="#">IGD 24 Jam</a></li>
-                                <li><a href="#">Laboratorium</a></li>
-                                <li><a href="#">Radiologi</a></li>
-                                <li><a href="#">Farmasi</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Widget 3: Contact & Newsletter -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget" data-aos="fade-up" data-aos-delay="400">
-                            <h3 class="footer-heading">Kontak Kami</h3>
-                            <div class="footer-contact">
-                                <div class="footer-contact-item">
-                                    <div class="footer-contact-icon">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="footer-contact-text">
-                                        Jl. Veteran No.48, Mojoroto, Kota Kediri, Jawa Timur 64112
-                                    </div>
-                                </div>
-                                <div class="footer-contact-item">
-                                    <div class="footer-contact-icon">
-                                        <i class="fas fa-phone-alt"></i>
-                                    </div>
-                                    <div class="footer-contact-text">
-                                        (0354) 771062
-                                    </div>
-                                </div>
-                                <div class="footer-contact-item">
-                                    <div class="footer-contact-icon">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div class="footer-contact-text">
-                                        rsuddahahusada@jatimprov.go.id
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <x-index.footer />
 
 
 
-                    <!-- Widget 4: Lokasi Kami -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-widget" data-aos="fade-up" data-aos-delay="300">
-                            <h3 class="footer-heading">Lokasi Kami</h3>
-                            <div class="footer-map">
-                                <div class="map-responsive"
-                                    style="border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; overflow: hidden; height: 200px;">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.132245550842!2d111.9970426!3d-7.8109804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7857159a94a805%3A0x7c99d01a424a2de3!2sRSUD%20DAHA%20HUSADA!5e0!3m2!1sen!2sid!4v1721800000000!5m2!1sen!2sid"
-                                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade">
-                                    </iframe>
-                                </div>
-                                <div class="map-info mt-3">
-                                    <p class="text-light mb-0"><i class="fas fa-map-marker-alt me-2"></i> Jl. Veteran
-                                        No.48,
-                                        Mojoroto, Kota Kediri</p>
-                                    <p class="text-light mb-0"><i class="fas fa-phone-alt me-2"></i> (0354) 771062</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="footer-bottom-content">
-                    <div class="footer-copyright">
-                        &copy; 2025/2026 RSUD Daha Husada. All Rights Reserved.
-                        <a href="https://portofolio-bilaldev.netlify.app/" target="_blank"
-                            style="text-decoration: none;">
-                            <span style="background: linear-gradient(135deg, #4facfe, #00f2fe);
-       -webkit-background-clip: text;
-       -webkit-text-fill-color: transparent;
-       font-weight: bold;">
-                                By Bilal
-                            </span>
-                        </a>
-                    </div>
-                    <div class="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">Sitemap</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <!-- Doctor Profile Modal -->
-    <div class="modal fade" id="doctorProfileModal" tabindex="-1" aria-labelledby="doctorProfileModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="doctorProfileModalLabel">Profil Dokter</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="text-center mb-4">
-                        <img id="modalDoctorImage" src="" class="rounded-circle" width="150" height="150" alt="">
-                        <h4 id="modalDoctorName" class="mt-3"></h4>
-                        <span id="modalDoctorTitle" class="badge bg-primary"></span>
-                    </div>
-                    <div class="doctor-details">
-                        <div class="mb-3">
-                            <h6>Spesialisasi</h6>
-                            <p id="modalDoctorSpecialty"></p>
-                        </div>
-                        <div class="mb-3">
-                            <h6>Deskripsi</h6>
-                            <p id="modalDoctorDescription"></p>
-                        </div>
-                        <div class="mb-3">
-                            <h6>Pengalaman</h6>
-                            <p id="modalDoctorExperience"></p>
-                        </div>
-                        <div class="mb-3">
-                            <h6>Jadwal Praktik</h6>
-                            <p id="modalDoctorSchedule"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
-                    <button type="button" class="btn btn-primary">Jadwal Janji</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <script><a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- JavaScript untuk animasi footer saat scroll -->
@@ -1330,87 +347,208 @@
         });
     </script>
 
-
     <script>
-
-        let currentPosition = 0;
-        const postWidth = 380; // 350px + 30px margin
-        let totalPosts = 5;
-        const visiblePosts = 3;
-        let maxPosition = -(totalPosts - visiblePosts) * postWidth;
-
-        // Fungsi untuk mengurutkan postingan berdasarkan timestamp (terbaru dulu)
-        function sortPostsByDate() {
-            const postsWrapper = document.getElementById('postsWrapper');
-            const posts = Array.from(postsWrapper.querySelectorAll('.post-container'));
-
-            // Urutkan postingan berdasarkan timestamp (terbaru dulu)
-            posts.sort((a, b) => {
-                const dateA = new Date(a.getAttribute('data-timestamp'));
-                const dateB = new Date(b.getAttribute('data-timestamp'));
-                return dateB - dateA; // Urutkan dari terbaru ke terlama
-            });
-
-            // Kosongkan wrapper
-            postsWrapper.innerHTML = '';
-
-            // Tambahkan kembali postingan yang sudah diurutkan
-            posts.forEach(post => {
-                postsWrapper.appendChild(post);
-            });
-
-            // Reset carousel position setelah pengurutan
-            currentPosition = 0;
-            updateCarousel();
-            updateIndicators();
-        }
-
-        // Panggil fungsi pengurutan saat halaman dimuat
         document.addEventListener('DOMContentLoaded', function () {
-            sortPostsByDate();
-        });
-
-        function moveCarousel(direction) {
-            currentPosition -= direction * postWidth; // Perbaikan arah
-            // Boundary checks
-            if (currentPosition > 0) {
-                currentPosition = 0;
-            } else if (currentPosition < maxPosition) {
-                currentPosition = maxPosition;
+            // Cek dukungan browser
+            if (!('speechSynthesis' in window)) {
+                console.log('Browser tidak mendukung Web Speech API');
+                return;
             }
-            updateCarousel();
-            updateIndicators();
-        }
 
-        function updateCarousel() {
-            const postsWrapper = document.getElementById('postsWrapper');
-            postsWrapper.style.transform = `translateX(${currentPosition}px)`;
-        }
+            const synth = window.speechSynthesis;
+            const speechIndicator = document.getElementById('speechIndicator');
+            let currentUtterance = null;
+            let selectedTextRange = null;
+            let isProcessing = false; // Flag untuk mencegah multiple trigger
 
-        function goToSlide(slideIndex) {
-            currentPosition = -slideIndex * postWidth;
-            // Boundary checks
-            if (currentPosition > 0) {
-                currentPosition = 0;
-            } else if (currentPosition < maxPosition) {
-                currentPosition = maxPosition;
+            // Deteksi seleksi teks dengan debouncing
+            let selectionTimeout;
+            document.addEventListener('mouseup', function () {
+                clearTimeout(selectionTimeout);
+
+                selectionTimeout = setTimeout(() => {
+                    if (isProcessing) return;
+
+                    const selection = window.getSelection();
+                    const selectedText = selection.toString().trim();
+
+                    if (selectedText) {
+                        isProcessing = true;
+
+                        // Simpan range seleksi
+                        selectedTextRange = selection.getRangeAt(0);
+
+                        // Hentikan pembacaan sebelumnya
+                        if (synth.speaking) {
+                            synth.cancel();
+                        }
+
+                        // Hapus highlight sebelumnya
+                        removeHighlight();
+
+                        // Highlight teks
+                        highlightSelectedText();
+
+                        // Baca teks
+                        speakText(selectedText);
+                    }
+                }, 300); // Debounce 300ms
+            });
+
+            // Fungsi untuk membaca teks
+            function speakText(text) {
+                currentUtterance = new SpeechSynthesisUtterance(text);
+
+                // Atur pengaturan
+                currentUtterance.lang = 'id-ID';
+                currentUtterance.rate = 1.0;
+                currentUtterance.pitch = 1.0;
+                currentUtterance.volume = 1.0;
+
+                // Event saat mulai
+                currentUtterance.onstart = function () {
+                    if (speechIndicator) {
+                        speechIndicator.classList.add('active');
+                    }
+                };
+
+                // Event saat selesai
+                currentUtterance.onend = function () {
+                    isProcessing = false;
+                    if (speechIndicator) {
+                        speechIndicator.classList.remove('active');
+                    }
+                    removeHighlight();
+                };
+
+                // Event jika error
+                currentUtterance.onerror = function () {
+                    isProcessing = false;
+                    if (speechIndicator) {
+                        speechIndicator.classList.remove('active');
+                    }
+                    removeHighlight();
+                };
+
+                // Mulai pembacaan
+                synth.speak(currentUtterance);
             }
-            updateCarousel();
-            updateIndicators();
-        }
 
-        function updateIndicators() {
-            const indicators = document.querySelectorAll('.indicator');
-            const activeIndex = Math.abs(Math.round(currentPosition / postWidth));
-            indicators.forEach((indicator, index) => {
-                if (index === activeIndex) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
+            // Highlight teks yang dibaca
+            function highlightSelectedText() {
+                if (!selectedTextRange) return;
+
+                try {
+                    const span = document.createElement('span');
+                    span.className = 'speaking';
+
+                    // Hapus highlight yang ada sebelumnya
+                    removeHighlight();
+
+                    // Wrap seleksi dengan span
+                    selectedTextRange.surroundContents(span);
+                } catch (e) {
+                    console.log('Highlight error:', e);
+                }
+            }
+
+            // Hapus highlight dengan lebih aman
+            function removeHighlight() {
+                const highlightedElements = document.querySelectorAll('.speaking');
+                highlightedElements.forEach(el => {
+                    const parent = el.parentNode;
+                    if (parent) {
+                        // Pindahkan semua child node ke parent
+                        while (el.firstChild) {
+                            parent.insertBefore(el.firstChild, el);
+                        }
+                        // Hapus span yang kosong
+                        parent.removeChild(el);
+                    }
+                });
+            }
+
+            // Hentikan saat klik di luar
+            document.addEventListener('click', function (e) {
+                if (synth.speaking && !e.target.closest('p, h1, h2, h3, h4, h5, h6, span, div')) {
+                    synth.cancel();
+                    isProcessing = false;
                 }
             });
-        }
 
+            // ======================
+            // FITUR HOVER SOUND
+            // ======================
+
+            // Tambahkan event listener untuk semua tombol dan link
+            const interactiveElements = document.querySelectorAll('button, a, [role="button"]');
+
+            interactiveElements.forEach(element => {
+                // Ambil teks dari elemen atau atribut khusus
+                const getTextToSpeak = (el) => {
+                    // Prioritaskan atribut data-speak jika ada
+                    if (el.getAttribute('data-speak')) {
+                        return el.getAttribute('data-speak');
+                    }
+
+                    // Gunakan teks dari elemen
+                    return el.textContent.trim() || el.getAttribute('aria-label') || el.getAttribute('title');
+                };
+
+                // Saat hover masuk
+                element.addEventListener('mouseenter', function () {
+                    // Jangan bicara jika sedang membaca teks blok
+                    if (isProcessing) return;
+
+                    const textToSpeak = getTextToSpeak(this);
+                    if (textToSpeak) {
+                        // Hentikan pembacaan hover sebelumnya jika ada
+                        if (synth.speaking && !currentUtterance?.isBlockText) {
+                            synth.cancel();
+                        }
+
+                        // Tandai ini sebagai pembicaraan hover
+                        const hoverUtterance = new SpeechSynthesisUtterance(textToSpeak);
+                        hoverUtterance.lang = 'id-ID';
+                        hoverUtterance.rate = 1; // Sedikit lebih cepat untuk hover
+                        hoverUtterance.volume = 5; // Volume lebih rendah
+                        hoverUtterance.isBlockText = false; // Tandai bukan teks blok
+
+                        // Event listeners
+                        hoverUtterance.onstart = () => {
+                            if (speechIndicator) {
+                                speechIndicator.classList.add('active');
+                                speechIndicator.innerHTML = '🔊 ' + textToSpeak.substring(0, 20) + '...';
+                            }
+                        };
+
+                        hoverUtterance.onend = () => {
+                            if (speechIndicator) {
+                                speechIndicator.classList.remove('active');
+                                speechIndicator.innerHTML = '🔊 Membaca...';
+                            }
+                        };
+
+                        synth.speak(hoverUtterance);
+                    }
+                });
+
+                // Saat hover keluar - hentikan pembacaan
+                element.addEventListener('mouseleave', function () {
+                    // Hanya hentikan jika ini pembicaraan hover
+                    if (synth.speaking && !currentUtterance?.isBlockText) {
+                        synth.cancel();
+                        if (speechIndicator) {
+                            speechIndicator.classList.remove('active');
+                            speechIndicator.innerHTML = '🔊 Membaca...';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script>
         // Fungsi untuk menambahkan postingan baru ke carousel
         function addNewPostToCarousel(post) {
             const postsWrapper = document.getElementById('postsWrapper');
@@ -1576,91 +714,80 @@
     </script>
 
     <script>
-        // Cek dan inisialisasi localStorage
-        function initializeNewsStorage() {
-            if (!localStorage.getItem('newsList')) {
-                // Jika belum ada, buat array kosong
-                localStorage.setItem('newsList', JSON.stringify([]));
-                console.log('LocalStorage untuk berita diinisialisasi');
+        // Data berita contoh
+        const sampleNews = [
+            {
+                id: 1,
+                title: "Tips Menjaga Kesehatan Jantung di Tengah Kesibukan",
+                category: "pencegahan",
+                content: "Dalam kehidupan modern yang penuh dengan kesibukan, menjaga kesehatan jantung menjadi semakin penting. Berikut adalah beberapa tips sederhana namun efektif untuk menjaga kesehatan jantung Anda. Pertama, lakukan olahraga teratur setidaknya 30 menit setiap hari. Kedua, perhatikan pola makan dengan mengurangi garam dan lemak jenuh. Ketiga, kelola stres dengan baik melalui meditasi atau hobi yang menyenangkan.",
+                date: "2023-05-15",
+                image: "https://images.unsplash.com/photo-1616281177739-2a8192c2421d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                author: "Admin",
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 2,
+                title: "Terobosan Baru dalam Pengobatan Kanker",
+                category: "penelitian",
+                content: "Tim peneliti kami berhasil menemukan metode baru dalam pengobatan kanker yang lebih efektif dengan efek samping yang minimal. Penemuan ini diharapkan dapat membantu banyak pasien kanker di seluruh dunia. Metode ini menggunakan pendekatan imunoterapi yang lebih spesifik dalam menargetkan sel kanker tanpa merusak sel sehat di sekitarnya.",
+                date: "2023-05-10",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                author: "Dr. Ahmad Fauzi",
+                createdAt: new Date().toISOString()
+            },
+            {
+                id: 3,
+                title: "Panduan Gizi Seimbang untuk Anak-anak",
+                category: "gizi",
+                content: "Nutrisi yang tepat sangat penting untuk tumbuh kembang anak. Ahli gizi kami membagikan panduan lengkap tentang cara menyusun menu gizi seimbang untuk anak-anak sesuai dengan usia mereka. Panduan ini mencakup kebutuhan kalori, vitamin, dan mineral yang diperlukan anak dalam setiap tahap pertumbuhan.",
+                date: "2023-05-05",
+                image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+                author: "Dr. Siti Rahayu",
+                createdAt: new Date().toISOString()
             }
+        ];
+
+        // Cek apakah ada data berita di localStorage
+        if (!localStorage.getItem('newsList')) {
+            localStorage.setItem('newsList', JSON.stringify(sampleNews));
         }
 
         // Fungsi untuk menampilkan berita di grid dashboard
         function loadBeritaGrid() {
-            console.log('Memuat berita grid...');
-
-            // Pastikan localStorage terinisialisasi
-            initializeNewsStorage();
-
             const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
             const container = document.getElementById('beritaGrid');
 
-            console.log('Total berita di localStorage:', newsList.length);
-            console.log('Data berita:', newsList);
-
-            // Jika tidak ada berita sama sekali, tampilkan pesan
             if (newsList.length === 0) {
-                container.innerHTML = `
-                <div class="col-12 text-center py-5">
-                    <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
-                    <h5>Belum Ada Berita</h5>
-                    <p class="text-muted">Belum ada berita yang tersedia</p>
-                    <button class="btn btn-primary mt-3" onclick="createSampleNews()">
-                        <i class="fas fa-plus me-2"></i>Buat Berita Contoh
-                    </button>
-                </div>
-            `;
-                return;
-            }
-
-            // Filter berita yang statusnya "publish"
-            const publishedNews = newsList.filter(news => {
-                console.log('Berita:', news.title, 'Status:', news.status);
-                // Jika tidak ada field status, anggap sebagai publish
-                return !news.status || news.status === 'publish';
-            });
-
-            console.log('Jumlah berita yang dipublish:', publishedNews.length);
-
-            if (publishedNews.length === 0) {
-                container.innerHTML = `
-                <div class="col-12 text-center py-5">
-                    <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
-                    <h5>Belum Ada Berita Dipublikasikan</h5>
-                    <p class="text-muted">Ada ${newsList.length} berita tapi belum ada yang dipublikasikan</p>
-                    <div class="alert alert-info mt-3">
-                        <i class="fas fa-info-circle me-2"></i>
-                        <strong>Untuk Admin:</strong> Silakan edit berita dan ubah statusnya menjadi "Publish".
-                    </div>
-                </div>
-            `;
+                // Tampilkan berita contoh jika tidak ada berita di localStorage
+                container.innerHTML = getSampleBeritaHTML();
                 return;
             }
 
             // Ambil 3 berita terbaru
-            const recentNews = publishedNews.slice(0, 3);
+            const recentNews = newsList.slice(0, 3);
+
             container.innerHTML = recentNews.map(news => {
                 const categoryClass = getCategoryClass(news.category);
-                return `
-                <div class="berita-card">
-                    <div class="berita-img">
-                        <img src="${news.image || 'https://picsum.photos/seed/news' + news.id + '/600/400.jpg'}" alt="${news.title}">
-                        <span class="berita-kategori ${categoryClass}">${formatCategoryName(news.category)}</span>
-                    </div>
-                    <div class="berita-content">
-                        <div class="berita-tanggal">
-                            <i class="far fa-calendar-alt"></i>
-                            <span>${formatDate(news.date)}</span>
-                        </div>
-                        <h3>${news.title}</h3>
-                        <p>${news.content ? news.content.substring(0, 150) + (news.content.length > 150 ? '...' : '') : ''}</p>
-                        <a href="{{ route('berita') }}" onclick="showNewsDetail(${news.id}); return false;" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-            `;
-            }).join('');
 
-            console.log('Berita berhasil dimuat');
+                return `
+            <div class="berita-card">
+                <div class="berita-img">
+                    <img src="${news.image}" alt="${news.title}">
+                    <span class="berita-kategori ${categoryClass}">${news.category}</span>
+                </div>
+                <div class="berita-content">
+                    <div class="berita-tanggal">
+                        <i class="far fa-calendar-alt"></i>
+                        <span>${formatDate(news.date)}</span>
+                    </div>
+                    <h3>${news.title}</h3>
+                    <p>${news.content.substring(0, 150)}${news.content.length > 150 ? '...' : ''}</p>
+                    <a href="{{ route('berita') }}" onclick="showNewsTab()" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        `;
+            }).join('');
         }
 
         // Fungsi untuk mendapatkan kelas CSS berdasarkan kategori
@@ -1671,210 +798,457 @@
                 'event': 'bg-warning',
                 'pencegahan': 'bg-info',
                 'penelitian': 'bg-danger',
-                'gizi': 'bg-secondary',
-                'fasilitas': 'bg-info',
-                'layanan': 'bg-primary',
-                'prestasi': 'bg-success'
+                'gizi': 'bg-secondary'
             };
             return categoryMap[category] || 'bg-secondary';
         }
 
-        // Fungsi untuk memformat nama kategori
-        function formatCategoryName(category) {
-            const categoryNames = {
-                'pengumuman': 'Pengumuman',
-                'kesehatan': 'Kesehatan',
-                'event': 'Event',
-                'pencegahan': 'Pencegahan',
-                'penelitian': 'Penelitian',
-                'gizi': 'Gizi',
-                'fasilitas': 'Fasilitas',
-                'layanan': 'Layanan',
-                'prestasi': 'Prestasi'
-            };
-            return categoryNames[category] || category;
+        // Fungsi untuk mendapatkan HTML berita contoh
+        function getSampleBeritaHTML() {
+            return `
+        <div class="berita-card">
+            <div class="berita-img">
+                <img src="https://images.unsplash.com/photo-1616281177739-2a8192c2421d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Berita Kesehatan">
+                <span class="berita-kategori bg-info">Pencegahan</span>
+            </div>
+            <div class="berita-content">
+                <div class="berita-tanggal">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>15 Mei 2023</span>
+                </div>
+                <h3>Tips Menjaga Kesehatan Jantung di Tengah Kesibukan</h3>
+                <p>Dalam kehidupan modern yang penuh dengan kesibukan, menjaga kesehatan jantung menjadi semakin penting. Berikut adalah beberapa tips sederhana namun efektif untuk menjaga kesehatan jantung Anda...</p>
+                <a href="{{ route('berita') }}" onclick="showNewsTab()" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="berita-card">
+            <div class="berita-img">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Berita Kesehatan">
+                <span class="berita-kategori bg-danger">Penelitian</span>
+            </div>
+            <div class="berita-content">
+                <div class="berita-tanggal">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>10 Mei 2023</span>
+                </div>
+                <h3>Terobosan Baru dalam Pengobatan Kanker</h3>
+                <p>Tim peneliti kami berhasil menemukan metode baru dalam pengobatan kanker yang lebih efektif dengan efek samping yang minimal. Penemuan ini diharapkan dapat membantu banyak pasien kanker di seluruh dunia...</p>
+                <a href="{{ route('berita') }}" onclick="showNewsTab()" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="berita-card">
+            <div class="berita-img">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Berita Kesehatan">
+                <span class="berita-kategori bg-secondary">Gizi</span>
+            </div>
+            <div class="berita-content">
+                <div class="berita-tanggal">
+                    <i class="far fa-calendar-alt"></i>
+                    <span>5 Mei 2023</span>
+                </div>
+                <h3>Panduan Gizi Seimbang untuk Anak-anak</h3>
+                <p>Nutrisi yang tepat sangat penting untuk tumbuh kembang anak. Ahli gizi kami membagikan panduan lengkap tentang cara menyusun menu gizi seimbang untuk anak-anak sesuai dengan usia mereka...</p>
+                <a href="{{ route('berita') }}" onclick="showNewsTab()" class="berita-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    `;
         }
 
-        // Fungsi untuk menampilkan detail berita
-        function showNewsDetail(newsId) {
-            console.log('Menampilkan detail berita ID:', newsId);
-            sessionStorage.setItem('selectedNewsId', newsId);
-            window.location.href = "{{ route('berita') }}";
+        // Fungsi untuk menampilkan berita terkini di dashboard
+        function loadRecentNews() {
+            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            const container = document.getElementById('recentNewsList');
+
+            if (newsList.length === 0) {
+                container.innerHTML = `
+            <div class="text-center py-4">
+                <i class="fas fa-newspaper fa-2x text-muted mb-2"></i>
+                <p class="text-muted mb-0">Belum ada berita terkini</p>
+            </div>
+        `;
+                return;
+            }
+
+            // Ambil 3 berita terbaru
+            const recentNews = newsList.slice(0, 3);
+
+            container.innerHTML = recentNews.map(news => {
+                const categoryClass = getCategoryClass(news.category);
+
+                return `
+            <div class="news-item mb-3 pb-3 border-bottom">
+                <div class="d-flex justify-content-between align-items-start">
+                    <div class="flex-grow-1">
+                        <h6 class="mb-1">${news.title}</h6>
+                        <div class="d-flex align-items-center mb-2">
+                            <span class="badge ${categoryClass} me-2">${news.category}</span>
+                            <small class="text-muted">
+                                <i class="far fa-calendar me-1"></i> ${formatDate(news.date)}
+                                ${news.author ? `<i class="fas fa-user ms-2 me-1"></i>${news.author}` : ''}
+                            </small>
+                        </div>
+                        <p class="mb-0 text-muted">${news.content.substring(0, 100)}${news.content.length > 100 ? '...' : ''}</p>
+                    </div>
+                    ${news.image ? `<img src="${news.image}" alt="${news.title}" class="img-thumbnail ms-3" style="width: 80px; height: 80px; object-fit: cover;">` : ''}
+                </div>
+            </div>
+        `;
+            }).join('');
+        }
+
+        // Fungsi untuk update statistik berita
+        function updateNewsStats() {
+            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            document.getElementById('totalNews').textContent = newsList.length;
+        }
+
+        // Fungsi untuk menampilkan tab berita
+        function showNewsTab() {
+            document.getElementById('news-tab').click();
+        }
+
+        // Fungsi untuk menyimpan berita
+        function saveNews() {
+            const newsId = document.getElementById('newsId').value;
+            const title = document.getElementById('newsTitle').value;
+            const category = document.getElementById('newsCategory').value;
+            const content = document.getElementById('newsContent').value;
+            const date = document.getElementById('newsDate').value;
+            const imageInput = document.getElementById('newsImage');
+
+            // Validasi form
+            if (!title || !category || !content || !date) {
+                showToast('Harap lengkapi semua field yang diperlukan', 'danger');
+                return;
+            }
+
+            // Ambil data berita dari localStorage
+            let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+
+            // Proses gambar jika ada
+            if (imageInput.files && imageInput.files[0]) {
+                // Validasi ukuran file (maks 2MB)
+                if (imageInput.files[0].size > 2 * 1024 * 1024) {
+                    showToast('Ukuran gambar maksimal 2MB', 'danger');
+                    return;
+                }
+
+                // Baca file sebagai base64
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    const imageData = e.target.result;
+
+                    if (newsId) {
+                        // Update berita yang ada
+                        updateNews(newsId, title, category, content, date, imageData);
+                    } else {
+                        // Tambah berita baru
+                        addNews(title, category, content, date, imageData);
+                    }
+                };
+                reader.readAsDataURL(imageInput.files[0]);
+            } else {
+                if (newsId) {
+                    // Update berita yang ada tanpa mengubah gambar
+                    updateNews(newsId, title, category, content, date, null);
+                } else {
+                    // Tambah berita baru tanpa gambar
+                    addNews(title, category, content, date, null);
+                }
+            }
+        }
+
+        // Fungsi untuk menambah berita baru
+        function addNews(title, category, content, date, image) {
+            let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+
+            const newNews = {
+                id: Date.now(),
+                title,
+                category,
+                content,
+                date,
+                image: image || `https://picsum.photos/seed/news${Date.now()}/600/400.jpg`,
+                createdAt: new Date().toISOString(),
+                author: currentUser.name // Tambahkan author
+            };
+
+            newsList.unshift(newNews);
+            localStorage.setItem('newsList', JSON.stringify(newsList));
+
+            // Tutup modal
+            const modalElement = document.getElementById('addNewsModal');
+            const modal = bootstrap.Modal.getInstance(modalElement);
+            modal.hide();
+
+            // Reset form
+            document.getElementById('newsForm').reset();
+            document.getElementById('newsImagePreview').style.display = 'none';
+
+            // Tampilkan notifikasi
+            showToast('Berita berhasil ditambahkan!', 'success');
+
+            // Refresh tampilan
+            loadNewsList();
+            loadRecentNews();
+            loadBeritaGrid();
+            updateNewsStats();
+        }
+
+        // Fungsi untuk menampilkan daftar berita di tab Berita
+        function loadNewsList() {
+            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            const container = document.getElementById('newsList');
+
+            if (newsList.length === 0) {
+                container.innerHTML = `
+            <div class="text-center py-4">
+                <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
+                <p class="text-muted">Belum ada berita</p>
+            </div>
+        `;
+                return;
+            }
+
+            container.innerHTML = newsList.map(news => {
+                const categoryClass = getCategoryClass(news.category);
+
+                return `
+            <div class="news-item mb-4 pb-4 border-bottom">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="${news.image}" alt="${news.title}" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5>${news.title}</h5>
+                            <div>
+                                <span class="badge ${categoryClass} me-2">${news.category}</span>
+                                <div class="btn-group btn-group-sm">
+                                    <button class="btn btn-outline-primary" onclick="editNews(${news.id})">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-outline-danger" onclick="deleteNews(${news.id})">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-muted small mb-2">
+                            <i class="far fa-calendar me-1"></i> ${formatDate(news.date)}
+                            ${news.author ? `<i class="fas fa-user ms-2 me-1"></i>${news.author}` : ''}
+                        </p>
+                        <p>${news.content.substring(0, 200)}${news.content.length > 200 ? '...' : ''}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+            }).join('');
+        }
+
+        // Fungsi untuk edit berita
+        function editNews(id) {
+            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            const news = newsList.find(item => item.id == id);
+
+            if (!news) {
+                showToast('Berita tidak ditemukan', 'danger');
+                return;
+            }
+
+            // Isi form dengan data berita
+            document.getElementById('newsId').value = news.id;
+            document.getElementById('newsTitle').value = news.title;
+            document.getElementById('newsCategory').value = news.category;
+            document.getElementById('newsContent').value = news.content;
+            document.getElementById('newsDate').value = news.date;
+
+            // Tampilkan preview gambar
+            const previewContainer = document.getElementById('newsImagePreview');
+            const previewImg = document.getElementById('previewNewsImg');
+            if (previewContainer && previewImg) {
+                previewImg.src = news.image;
+                previewContainer.style.display = 'block';
+            }
+
+            // Ubah judul modal
+            document.getElementById('addNewsModalLabel').innerHTML = '<i class="fas fa-edit me-2"></i>Edit Berita';
+
+            // Tampilkan modal
+            const modalElement = document.getElementById('addNewsModal');
+            const modal = new bootstrap.Modal(modalElement);
+            modal.show();
+        }
+
+        // Fungsi untuk update berita
+        function updateNews(id, title, category, content, date, image) {
+            let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+            const newsIndex = newsList.findIndex(news => news.id == id);
+
+            if (newsIndex !== -1) {
+                newsList[newsIndex] = {
+                    ...newsList[newsIndex],
+                    title,
+                    category,
+                    content,
+                    date,
+                    image: image || newsList[newsIndex].image,
+                    updatedAt: new Date().toISOString()
+                };
+
+                localStorage.setItem('newsList', JSON.stringify(newsList));
+
+                // Tutup modal
+                const modalElement = document.getElementById('addNewsModal');
+                const modal = bootstrap.Modal.getInstance(modalElement);
+                modal.hide();
+
+                // Reset form
+                document.getElementById('newsForm').reset();
+                document.getElementById('newsImagePreview').style.display = 'none';
+
+                // Tampilkan notifikasi
+                showToast('Berita berhasil diperbarui!', 'success');
+
+                // Refresh tampilan
+                loadNewsList();
+                loadRecentNews();
+                loadBeritaGrid();
+            }
+        }
+
+        // Fungsi untuk menghapus berita
+        function deleteNews(id) {
+            if (confirm('Apakah Anda yakin ingin menghapus berita ini?')) {
+                let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
+                newsList = newsList.filter(news => news.id != id);
+                localStorage.setItem('newsList', JSON.stringify(newsList));
+
+                // Tampilkan notifikasi
+                showToast('Berita berhasil dihapus!', 'success');
+
+                // Refresh tampilan
+                loadNewsList();
+                loadRecentNews();
+                loadBeritaGrid();
+                updateNewsStats();
+            }
+        }
+
+        // Fungsi untuk menampilkan notifikasi toast
+        function showToast(message, type = 'success') {
+            // Buat elemen toast
+            const toastContainer = document.createElement('div');
+            toastContainer.className = 'toast-container position-fixed bottom-0 end-0 p-3';
+            toastContainer.style.zIndex = '1050';
+            const toastHTML = `
+        <div class="toast align-items-center text-white bg-${type}" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>
+                    ${message}
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    `;
+            toastContainer.innerHTML = toastHTML;
+            document.body.appendChild(toastContainer);
+
+            // Tampilkan toast
+            const toastElement = toastContainer.querySelector('.toast');
+            const toast = new bootstrap.Toast(toastElement, { autohide: true, delay: 5000 });
+            toast.show();
+
+            // Hapus container toast setelah toast ditutup
+            toastElement.addEventListener('hidden.bs.toast', function () {
+                toastContainer.remove();
+            });
         }
 
         // Format tanggal
         function formatDate(dateString) {
-            if (!dateString) return 'Tanggal tidak tersedia';
             const options = { day: 'numeric', month: 'short', year: 'numeric' };
             return new Date(dateString).toLocaleDateString('id-ID', options);
         }
 
-        // Fungsi untuk membuat berita contoh
-        function createSampleNews() {
-            console.log('Membuat berita contoh...');
+        // Tambahkan di fungsi loadDashboard()
+        function loadDashboard() {
+            // Update info user
+            document.getElementById('welcomeUser').textContent = currentUser.name;
+            document.getElementById('patientName').textContent = currentUser.name;
+            document.getElementById('patientPhone').textContent = currentUser.phone;
+            document.getElementById('patientAge').textContent = calculateAge(currentUser.dob);
 
-            const sampleNews = {
-                id: Date.now(),
-                title: "RSUD Daha Husada Meluncurkan Layanan Telemedicine",
-                category: "layanan",
-                content: "RSUD Daha Husada dengan bangga mengumumkan peluncuran layanan telemedicine terbaru. Layanan ini memungkinkan pasien untuk berkonsultasi dengan dokter secara online tanpa harus datang ke rumah sakit. Ini adalah langkah inovatif untuk meningkatkan akses layanan kesehatan bagi masyarakat.",
-                date: new Date().toISOString().split('T')[0],
-                image: "https://images.unsplash.com/photo-1616281177739-2a8192c2421d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-                author: "Admin RSUD",
-                status: "publish",
-                createdAt: new Date().toISOString()
-            };
+            // Update statistik
+            document.getElementById('upcomingAppointments').textContent = currentUser.appointments.filter(a => a.status === 'confirmed').length;
+            document.getElementById('medicalRecords').textContent = currentUser.medicalRecords.length;
+            document.getElementById('labResults').textContent = '3';
+            document.getElementById('pendingBills').textContent = currentUser.billing.filter(b => b.status === 'pending').length;
 
-            let newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-            newsList.unshift(sampleNews);
-            localStorage.setItem('newsList', JSON.stringify(newsList));
+            // Load berita
+            loadBeritaGrid();
+            loadRecentNews();
+            updateNewsStats();
 
-            console.log('Berita contoh berhasil dibuat');
-            alert('Berita contoh berhasil dibuat! Halaman akan di-refresh.');
-            location.reload();
+            // Load janji temu
+            loadAppointments();
+            // Load rekam medis
+            loadMedicalRecords();
+            // Load tagihan
+            loadBilling();
+            // Load profil
+            loadProfile();
         }
 
         // Event listener
         document.addEventListener('DOMContentLoaded', function () {
-            console.log('DOM dimuat, mempersiapkan berita...');
+            // Preview gambar berita
+            const newsImageInput = document.getElementById('newsImage');
+            const newsImagePreview = document.getElementById('newsImagePreview');
+            const previewNewsImg = document.getElementById('previewNewsImg');
+
+            if (newsImageInput && previewNewsImg) {
+                newsImageInput.addEventListener('change', function () {
+                    if (this.files && this.files[0]) {
+                        const reader = new FileReader();
+                        reader.onload = function (e) {
+                            previewNewsImg.src = e.target.result;
+                            newsImagePreview.style.display = 'block';
+                        }
+                        reader.readAsDataURL(this.files[0]);
+                    }
+                });
+            }
+
+            // Reset form saat modal ditutup
+            const addNewsModal = document.getElementById('addNewsModal');
+            if (addNewsModal) {
+                addNewsModal.addEventListener('hidden.bs.modal', function () {
+                    document.getElementById('newsForm').reset();
+                    document.getElementById('newsImagePreview').style.display = 'none';
+                    document.getElementById('addNewsModalLabel').innerHTML = '<i class="fas fa-newspaper me-2"></i>Tambah Berita Baru';
+                });
+            }
+
+            // Event listener untuk tombol simpan berita
+            const saveNewsBtn = document.getElementById('saveNewsBtn');
+            if (saveNewsBtn) {
+                saveNewsBtn.addEventListener('click', saveNews);
+            }
 
             // Load data saat halaman dimuat
             if (document.getElementById('beritaGrid')) {
                 loadBeritaGrid();
             }
-
-            // Cek apakah ada ID berita yang tersimpan (untuk halaman detail)
-            const selectedNewsId = sessionStorage.getItem('selectedNewsId');
-            if (selectedNewsId && document.getElementById('newsDetailContainer')) {
-                console.log('Menampilkan detail berita untuk ID:', selectedNewsId);
-                const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-                const news = newsList.find(item => item.id == selectedNewsId);
-
-                if (news) {
-                    // Tampilkan detail berita
-                    const categoryClass = getCategoryClass(news.category);
-                    document.getElementById('newsDetailContainer').innerHTML = `
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>${news.title}</h2>
-                            <div class="d-flex align-items-center mt-2">
-                                <span class="badge ${categoryClass} me-2">${formatCategoryName(news.category)}</span>
-                                <small class="text-muted">
-                                    <i class="far fa-calendar me-1"></i> ${formatDate(news.date)}
-                                    ${news.author ? `<i class="fas fa-user ms-2 me-1"></i>${news.author}` : ''}
-                                </small>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            ${news.image ? `<img src="${news.image}" class="img-fluid rounded mb-4" alt="${news.title}">` : ''}
-                            <div class="news-content">
-                                ${news.content ? news.content.replace(/\n/g, '<br>') : ''}
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <button onclick="history.back()" class="btn btn-outline-secondary">
-                                <i class="fas fa-arrow-left me-2"></i>Kembali
-                            </button>
-                        </div>
-                    </div>
-                `;
-                } else {
-                    document.getElementById('newsDetailContainer').innerHTML = `
-                    <div class="alert alert-warning">
-                        <i class="fas fa-exclamation-triangle me-2"></i>
-                        Berita tidak ditemukan
-                    </div>
-                `;
-                }
-
-                sessionStorage.removeItem('selectedNewsId');
+            if (document.getElementById('recentNewsList')) {
+                loadRecentNews();
             }
-
-            // Jika halaman semua berita dimuat, tampilkan semua berita
-            if (document.getElementById('allNewsContainer')) {
-                loadAllNews();
+            if (document.getElementById('newsList')) {
+                loadNewsList();
             }
+            updateNewsStats();
         });
-
-        // Fungsi untuk menampilkan semua berita di halaman berita
-        function loadAllNews() {
-            console.log('Memuat semua berita...');
-            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-            const container = document.getElementById('allNewsContainer');
-
-            // Filter berita yang statusnya "publish" atau tidak ada status
-            const publishedNews = newsList.filter(news => {
-                return !news.status || news.status === 'publish';
-            });
-
-            if (publishedNews.length === 0) {
-                container.innerHTML = `
-                <div class="text-center py-5">
-                    <i class="fas fa-newspaper fa-3x text-muted mb-3"></i>
-                    <h5>Belum Ada Berita</h5>
-                    <p class="text-muted">Belum ada berita yang dipublikasikan</p>
-                    <button class="btn btn-primary" onclick="createSampleNews()">
-                        <i class="fas fa-plus me-2"></i>Buat Berita Contoh
-                    </button>
-                </div>
-            `;
-                return;
-            }
-
-            container.innerHTML = publishedNews.map(news => {
-                const categoryClass = getCategoryClass(news.category);
-                return `
-                <div class="card mb-4">
-                    <div class="row g-0">
-                        <div class="col-md-4">
-                            <img src="${news.image || 'https://picsum.photos/seed/news' + news.id + '/600/400.jpg'}" class="img-fluid rounded-start h-100" style="object-fit: cover;" alt="${news.title}">
-                        </div>
-                        <div class="col-md-8">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <h5 class="card-title">${news.title}</h5>
-                                    <span class="badge ${categoryClass}">${formatCategoryName(news.category)}</span>
-                                </div>
-                                <p class="text-muted small mb-3">
-                                    <i class="far fa-calendar me-1"></i> ${formatDate(news.date)}
-                                    ${news.author ? `<i class="fas fa-user ms-2 me-1"></i>${news.author}` : ''}
-                                </p>
-                                <p class="card-text">${news.content ? news.content.substring(0, 200) + (news.content.length > 200 ? '...' : '') : ''}</p>
-                                <a href="#" onclick="showNewsDetail(${news.id}); return false;" class="btn btn-primary">Baca Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            `;
-            }).join('');
-        }
-
-        // Fungsi untuk memeriksa dan memperbaiki data berita
-        function checkAndFixNewsData() {
-            const newsList = JSON.parse(localStorage.getItem('newsList')) || [];
-
-            // Periksa setiap berita
-            newsList.forEach(news => {
-                // Pastikan ada field status
-                if (!news.status) {
-                    news.status = 'publish';
-                    console.log('Memperbaiki berita:', news.title, 'menambah status: publish');
-                }
-
-                // Pastikan ada field image
-                if (!news.image) {
-                    news.image = 'https://picsum.photos/seed/news' + news.id + '/600/400.jpg';
-                    console.log('Memperbaiki berita:', news.title, 'menambah gambar default');
-                }
-            });
-
-            // Simpan kembali
-            localStorage.setItem('newsList', JSON.stringify(newsList));
-            console.log('Data berita telah diperbaiki');
-        }
-
-        // Jalankan pemeriksaan saat halaman dimuat
-        checkAndFixNewsData();
     </script>
 
 </body>

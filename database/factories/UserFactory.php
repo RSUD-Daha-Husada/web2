@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 
 namespace Database\Factories;
 
@@ -41,4 +41,5 @@ class UserFactory extends Factory
             'email_verified_at' => null,
         ]);
     }
-}
+} 
+

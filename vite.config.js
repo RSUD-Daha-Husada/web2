@@ -4,16 +4,13 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/css/app.css', 'resources/js/app.js'],
+            input: [
+                'resources/css/app.css',   // file CSS global
+                'resources/js/app.js',     // file JS global
+                'resources/js/index/navbar.js', // JS komponen navbar
+                // tambahkan JS lain untuk komponen lain jika ada
+            ],
             refresh: true,
         }),
     ],
-    server: {
-        proxy: {
-            '/api': {
-                target: 'http://localhost:5000',
-                changeOrigin: true,
-            },
-        },
-    },
 });

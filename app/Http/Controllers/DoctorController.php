@@ -101,6 +101,13 @@ class DoctorController extends Controller
         }
     }
 
+
+    public function index()
+    {
+        return view('components.doctors');
+    }
+
+
     public function edit($id)
     {
         $doctor = Doctor::find($id);
@@ -118,7 +125,7 @@ class DoctorController extends Controller
     public function user()
     {
         $doctors = Doctor::all();
-        return view('doctors.debug', compact('doctors'));
+        return view('doctors.user', compact('doctors'));
     }
 
     /**

@@ -1,56 +1,64 @@
 <?php
+
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Http\Request;
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\AdminController;
 
-
-
-// HALAMAN UTAMA
+// =======================
+// HALAMAN UTAMA (Public)
+// =======================
 Route::get('/', function () {
     return view('index');
 })->name('home');
+
 Route::get('/berita', function () {
     return view('berita');
 })->name('berita');
+
 Route::get('/ketersediaan-bed', function () {
     return view('ketersediaan_bed');
 })->name('ketersediaan_bed');
+
 Route::get('/patient-portal', function () {
     return view('patient_portal');
 })->name('patient.portal');
+
 Route::get('/hubungi-kami', function () {
     return view('hubungi_kami');
 })->name('hubungi.kami');
+
 Route::get('/pengaduan', function () {
     return view('pengaduan'); 
 });
 
-Route::get('/debug-doctors', function() {
-    $doctors = App\Models\Doctor::all();
-    return view('doctors.debug', compact('doctors'));
-});
-
-Route::get('/test-upload', function() {
-    return view('test-upload');
-});
-
-// Routes untuk halaman dokter
-Route::get('/admin/doctors', [DoctorController::class, 'admin'])->name('doctors.admin');
+// =======================
+// DOKTER (Public)
+// =======================
 Route::get('/doctors', [DoctorController::class, 'user'])->name('doctors.index');
 
-// LOGIN
+// =======================
+// LOGIN / AUTH
+// =======================
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.post');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
-// API routes untuk CRUD dokter
-Route::get('/api/doctors', [DoctorController::class, 'getDoctors']);
-Route::post('/api/doctors/add', [DoctorController::class, 'addDoctor']);
-Route::post('/api/doctors/update', [DoctorController::class, 'updateDoctor']);
-Route::post('/api/doctors/delete', [DoctorController::class, 'deleteDoctor']);
+// =======================
+// API DOCTORS (AJAX fetch JS)
+// =======================
+Route::prefix('api')->group(function () {
+    Route::get('/doctors', [DoctorController::class, 'getDoctors']);
+    Route::post('/doctors/add', [DoctorController::class, 'addDoctor']);
+    Route::post('/doctors/update', [DoctorController::class, 'updateDoctor']);
+    Route::post('/doctors/delete', [DoctorController::class, 'deleteDoctor']);
+});
 
-// Admin routes dengan middleware auth
+// =======================
+// ADMIN ROUTES (hanya bisa login)
+// =======================
 Route::middleware(['web', 'auth'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/doctors', [DoctorController::class, 'admin'])->name('doctors.index');
     Route::get('/doctors/create', [DoctorController::class, 'create'])->name('doctors.create');
@@ -60,31 +68,32 @@ Route::middleware(['web', 'auth'])->prefix('admin')->name('admin.')->group(funct
     Route::delete('/doctors/{id}', [DoctorController::class, 'destroy'])->name('doctors.destroy');
 });
 
-// Public routes
-Route::get('/doctors/{id}/edit', [DoctorController::class, 'edit'])->name('doctors.edit');
-Route::get('/doctors/admin', [DoctorController::class, 'admin'])->name('doctors.admin');
-Route::get('/doctors', [DoctorController::class, 'user'])->name('doctors.public');
-Route::get('/patient-portal', function () {
-    return view('patient_portal');
-})->name('patient.portal');
+// =======================
+// DEBUG / TESTING
+// =======================
+Route::get('/debug-doctors', function() {
+    $doctors = App\Models\Doctor::all();
+    return view('doctors.debug', compact('doctors'));
+});
 
-// Debug route
+Route::get('/test-upload', function() {
+    return view('test-upload');
+});
+
 Route::get('/check-admin-status', function() {
     if (auth()->check()) {
         $user = auth()->user();
         return [
             'logged_in' => true,
-            'user_id' => $user->id,
+            'user_id'   => $user->id,
             'user_name' => $user->name,
-            'is_admin' => $user->is_admin,
+            'is_admin'  => $user->is_admin,
         ];
     } else {
         return ['logged_in' => false];
     }
 })->middleware('web');
 
-
-// Tambahkan di paling bawah
 Route::get('/test-simple-form', function() {
     return '
         <form method="POST" action="/test-simple-store">
@@ -100,33 +109,27 @@ Route::get('/test-simple-form', function() {
     ';
 });
 
-// Di routes/web.php
-Route::get('/test-debug', function() {
-    return "Test route works!";
-});
-
-Route::post('/test-debug-store', function(Request $request) {
-    // Log request
+Route::post('/test-simple-store', function(Request $request) {
     Log::debug('Test debug store called', $request->all());
     
     try {
-        // Create doctor
         $doctor = \App\Models\Doctor::create([
-            'name' => $request->name,
-            'specialty' => $request->specialty,
-            'title' => $request->title,
+            'name'        => $request->name,
+            'specialty'   => $request->specialty,
+            'title'       => $request->title,
             'description' => $request->description,
-            'phone' => $request->phone,
-            'email' => $request->email,
+            'phone'       => $request->phone,
+            'email'       => $request->email,
         ]);
         
         return "SUCCESS: Doctor created with ID " . $doctor->id;
-        
     } catch (\Exception $e) {
         Log::error('Test debug error: ' . $e->getMessage());
         return "ERROR: " . $e->getMessage();
     }
 });
-Route::get('/test-form', function() {
-    return view('test-form');
+
+// Simple test route
+Route::get('/test-debug', function() {
+    return "Test route works!";
 });

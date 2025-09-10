@@ -32,5 +32,10 @@
                 {{ $slot }}
             </main>
         </div>
+
+        {{-- Footer Section (Hanya tampil di luar patient-portal) --}}
+        @if (!request()->is('patient-portal*'))
+            <x-patient_portal.footer />
+        @endif
     </body>
 </html>

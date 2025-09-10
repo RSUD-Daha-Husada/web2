@@ -18,8 +18,7 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-// Email: admin@admin.com
-// Password: admin123
+
 
 
 
